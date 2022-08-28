@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a63a9d26-7c61-4b64-bd0c-c864b63f5ace">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="kode_perusahaan" class="java.lang.String"/>
+	<parameter name="kode_dept" class="java.lang.String"/>
+	<parameter name="kode_lokasi" class="java.lang.String"/>
+	<parameter name="kode_merk" class="java.lang.String"/>
+	<parameter name="kode_tipe" class="java.lang.String"/>
+	<parameter name="kode_kategori" class="java.lang.String"/>
+	<parameter name="kode_barang" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT
+     trans_barang.`kode` AS trans_barang_kode,
+     trans_barang.`kode_kategori` AS trans_barang_kode_kategori,
+     trans_barang.`kode_merk` AS trans_barang_kode_merk,
+     trans_barang.`kode_perusahaan` AS trans_barang_kode_perusahaan,
+     trans_barang.`kode_lokasi` AS trans_barang_kode_lokasi,
+     trans_barang.`kode_dept` AS trans_barang_kode_dept,
+     kategori.`kode` AS kategori_kode,
+     kategori.`nama` AS kategori_nama,
+     merk.`kode` AS merk_kode,
+     merk.`nama` AS merk_nama,
+     perusahaan.`kode` AS perusahaan_kode,
+     perusahaan.`nama` AS perusahaan_nama,
+     lokasi.`kode` AS lokasi_kode,
+     lokasi.`nama` AS lokasi_nama,
+     department.`kode` AS department_kode,
+     department.`nama` AS department_nama
+FROM
+     `trans_barang` trans_barang INNER JOIN `perusahaan` perusahaan ON trans_barang.`kode_perusahaan` = perusahaan.`kode`
+     INNER JOIN `department` department ON trans_barang.`kode_dept` = department.`kode`
+     INNER JOIN `lokasi` lokasi ON trans_barang.`kode_lokasi` = lokasi.`kode`
+     INNER JOIN `kategori` kategori ON trans_barang.`kode_kategori` = kategori.`kode`
+     INNER JOIN `merk` merk ON trans_barang.`kode_merk` = merk.`kode`]]>
+	</queryString>
+	<field name="trans_barang_kode" class="java.lang.String"/>
+	<field name="trans_barang_kode_kategori" class="java.lang.Integer"/>
+	<field name="trans_barang_kode_merk" class="java.lang.Integer"/>
+	<field name="trans_barang_kode_perusahaan" class="java.lang.Integer"/>
+	<field name="trans_barang_kode_lokasi" class="java.lang.Integer"/>
+	<field name="trans_barang_kode_dept" class="java.lang.Integer"/>
+	<field name="kategori_kode" class="java.lang.Integer"/>
+	<field name="kategori_nama" class="java.lang.String"/>
+	<field name="merk_kode" class="java.lang.Integer"/>
+	<field name="merk_nama" class="java.lang.String"/>
+	<field name="perusahaan_kode" class="java.lang.Integer"/>
+	<field name="perusahaan_nama" class="java.lang.String"/>
+	<field name="lokasi_kode" class="java.lang.Integer"/>
+	<field name="lokasi_nama" class="java.lang.String"/>
+	<field name="department_kode" class="java.lang.Integer"/>
+	<field name="department_nama" class="java.lang.String"/>
+	<variable name="tesqr" class="java.lang.String">
+		<variableExpression><![CDATA["kode assets : " + $F{trans_barang_kode} +
+"  -  Kategori : " + $F{kategori_nama} +
+"  -  Merk : " + $F{merk_nama} +
+"  -  Perusahaan : " + $F{perusahaan_nama} +
+"  -  Department : " + $F{department_nama} +
+"  -  Lokasi : " +$F{lokasi_nama}]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="27" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="0a7a5ba0-8021-49b2-ae71-a84558edd96a" x="130" y="0" width="330" height="20"/>
+				<textElement>
+					<font size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CETAK QR CODE LIST BARANG / ASSETS]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="5" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="60" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="0a7a5ba0-8021-49b2-ae71-a84558edd96a" x="315" y="36" width="107" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[QR CODE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="0a7a5ba0-8021-49b2-ae71-a84558edd96a" x="102" y="36" width="100" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Kode Barang]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="7deac268-a9d2-4823-89c5-8e750bffc897" x="76" y="56" width="426" height="1"/>
+				<graphicElement>
+					<pen lineWidth="3.0"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="126" splitType="Stretch">
+			<textField>
+				<reportElement uuid="1bf02dc1-add7-4085-86bb-9eb216b16aeb" x="76" y="29" width="203" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{trans_barang_kode}]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement uuid="0687b422-e4c3-46df-810d-680a9fa5cb5c" x="305" y="6" width="117" height="107"/>
+				<imageExpression><![CDATA[com.google.zxing.client.j2se.MatrixToImageWriter.toBufferedImage(
+new com.google.zxing.qrcode.QRCodeWriter().encode(
+$V{tesqr},
+com.google.zxing.BarcodeFormat.QR_CODE, 300, 300))]]></imageExpression>
+			</image>
+			<line>
+				<reportElement uuid="22b36535-87c7-4293-9e31-735290dd0076" x="76" y="124" width="426" height="1"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement uuid="ac1a3833-9085-4ce3-b896-7530564df2df" x="76" y="53" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Dicetak Tanggal  :]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement uuid="0f4e3a98-4b2c-4b9c-b089-36898c5860bc" x="176" y="53" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement uuid="c095ce2b-5371-47b7-bda7-ade23fbcb799" x="76" y="98" width="126" height="14"/>
+				<imageExpression><![CDATA["C:\\Users\\PAKUAN-IT\\Documents\\LOGO-PAKUAN-Tbk.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</detail>
+</jasperReport>

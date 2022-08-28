@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="5c263a1a-51b1-473f-b82a-d8f02fe56efb">
+	<property name="ireport.zoom" value="1.6105100000000008"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="id_kategori" class="java.lang.Integer"/>
+	<queryString>
+		<![CDATA[SELECT
+     trans_barang.`kode` AS trans_barang_kode,
+     trans_barang.`kode_kategori` AS trans_barang_kode_kategori,
+     trans_barang.`kode_merk` AS trans_barang_kode_merk,
+     trans_barang.`kode_barang` AS trans_barang_kode_barang,
+     trans_barang.`kode_perusahaan` AS trans_barang_kode_perusahaan,
+     trans_barang.`kode_lokasi` AS trans_barang_kode_lokasi,
+     trans_barang.`kode_dept` AS trans_barang_kode_dept,
+     trans_barang.`kode_vendor` AS trans_barang_kode_vendor,
+     trans_barang.`no_po` AS trans_barang_no_po,
+     trans_barang.`harga` AS trans_barang_harga,
+     trans_barang.`status` AS trans_barang_status,
+     trans_barang.`keterangan` AS trans_barang_keterangan,
+     barang.`kode` AS barang_kode,
+     barang.`nama` AS barang_nama,
+     department.`kode` AS department_kode,
+     department.`nama` AS department_nama,
+     department.`kode_perusahaan` AS department_kode_perusahaan,
+     merk.`kode` AS merk_kode,
+     merk.`nama` AS merk_nama,
+     vendor.`kode` AS vendor_kode,
+     vendor.`nama` AS vendor_nama,
+     perusahaan.`kode` AS perusahaan_kode,
+     perusahaan.`nama` AS perusahaan_nama,
+     lokasi.`kode` AS lokasi_kode,
+     lokasi.`nama` AS lokasi_nama,
+     lokasi.`detail` AS lokasi_detail,
+     lokasi.`keterangan` AS lokasi_keterangan,
+     kategori.`kode` AS kategori_kode,
+     kategori.`nama` AS kategori_nama,
+     kategori.`keterangan` AS kategori_keterangan
+FROM
+     `trans_barang` trans_barang INNER JOIN `merk` merk ON trans_barang.`kode_merk` = merk.`kode`
+     INNER JOIN `barang` barang ON trans_barang.`kode_barang` = barang.`kode`
+     INNER JOIN `department` department ON trans_barang.`kode_dept` = department.`kode`
+     INNER JOIN `vendor` vendor ON trans_barang.`kode_vendor` = vendor.`kode`
+     INNER JOIN `perusahaan` perusahaan ON trans_barang.`kode_perusahaan` = perusahaan.`kode`
+     INNER JOIN `lokasi` lokasi ON trans_barang.`kode_lokasi` = lokasi.`kode`
+     INNER JOIN `kategori` kategori ON trans_barang.`kode_kategori` = kategori.`kode`
+WHERE
+     trans_barang.kode_kategori = $P{id_kategori}]]>
+	</queryString>
+	<field name="trans_barang_kode" class="java.lang.String"/>
+	<field name="trans_barang_kode_kategori" class="java.lang.Integer"/>
+	<field name="trans_barang_kode_merk" class="java.lang.Integer"/>
+	<field name="trans_barang_kode_barang" class="java.lang.Integer"/>
+	<field name="trans_barang_kode_perusahaan" class="java.lang.Integer"/>
+	<field name="trans_barang_kode_lokasi" class="java.lang.Integer"/>
+	<field name="trans_barang_kode_dept" class="java.lang.Integer"/>
+	<field name="trans_barang_kode_vendor" class="java.lang.Integer"/>
+	<field name="trans_barang_no_po" class="java.lang.String"/>
+	<field name="trans_barang_harga" class="java.lang.Long"/>
+	<field name="trans_barang_status" class="java.lang.String"/>
+	<field name="trans_barang_keterangan" class="java.lang.String"/>
+	<field name="barang_kode" class="java.lang.Integer"/>
+	<field name="barang_nama" class="java.lang.String"/>
+	<field name="department_kode" class="java.lang.Integer"/>
+	<field name="department_nama" class="java.lang.String"/>
+	<field name="department_kode_perusahaan" class="java.lang.Integer"/>
+	<field name="merk_kode" class="java.lang.Integer"/>
+	<field name="merk_nama" class="java.lang.String"/>
+	<field name="vendor_kode" class="java.lang.Integer"/>
+	<field name="vendor_nama" class="java.lang.String"/>
+	<field name="perusahaan_kode" class="java.lang.Integer"/>
+	<field name="perusahaan_nama" class="java.lang.String"/>
+	<field name="lokasi_kode" class="java.lang.Integer"/>
+	<field name="lokasi_nama" class="java.lang.String"/>
+	<field name="lokasi_detail" class="java.lang.String"/>
+	<field name="lokasi_keterangan" class="java.lang.String"/>
+	<field name="kategori_kode" class="java.lang.Integer"/>
+	<field name="kategori_nama" class="java.lang.String"/>
+	<field name="kategori_keterangan" class="java.lang.String"/>
+	<variable name="nourut" class="java.lang.Integer" calculation="Count">
+		<variableExpression><![CDATA[$V{nourut}]]></variableExpression>
+		<initialValueExpression><![CDATA[1]]></initialValueExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<image>
+				<reportElement uuid="f1ab8ae5-9164-43dc-87c0-97147c01962f" x="153" y="1" width="402" height="35"/>
+				<imageExpression><![CDATA["D:\\project\\BAST\\src\\img\\LOGO-PAKUAN-Tbk (1).jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement uuid="d00374e6-4c97-4eb7-9540-0df8da5f9224" x="81" y="36" width="375" height="33"/>
+				<textElement textAlignment="Center">
+					<font fontName="Segoe UI Light" size="8"/>
+				</textElement>
+				<text><![CDATA[Sawangan Golf and Resort, Shila at Sawangan
+Jl. Raya Muchtar RT 001, 002, 003, RW 001, 007, Kelurahan Sawangan, Kecamatan Sawangan, Kota Depok, Jawa Barat 16511 Telp.: 0251 – 8413838]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="67" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="64eed643-882b-490b-aacd-97c69898eaee" x="164" y="0" width="255" height="19"/>
+				<textElement>
+					<font fontName="Segoe UI" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LAPORAN ASSETS/ INVENTORIES PER-KATEGORI]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="fb9b90ec-d1e5-42de-800d-e39019838b10" x="164" y="18" width="230" height="1"/>
+			</line>
+			<staticText>
+				<reportElement uuid="64eed643-882b-490b-aacd-97c69898eaee" x="10" y="31" width="90" height="12"/>
+				<textElement>
+					<font fontName="Segoe UI" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nama Kategori]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="64eed643-882b-490b-aacd-97c69898eaee" x="100" y="31" width="11" height="12"/>
+				<textElement>
+					<font fontName="Segoe UI" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="64eed643-882b-490b-aacd-97c69898eaee" x="100" y="43" width="11" height="12"/>
+				<textElement>
+					<font fontName="Segoe UI" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="64eed643-882b-490b-aacd-97c69898eaee" x="10" y="43" width="90" height="12"/>
+				<textElement>
+					<font fontName="Segoe UI" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Keterangan]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="ff88c952-f1bf-4045-8e89-b0ced7fe2d51" x="111" y="31" width="203" height="12"/>
+				<textElement>
+					<font fontName="Segoe UI" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{kategori_nama}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="501d0c86-2420-4857-9248-c8836829b837" x="111" y="43" width="203" height="12"/>
+				<textElement>
+					<font fontName="Segoe UI" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{kategori_keterangan}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="32" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="64eed643-882b-490b-aacd-97c69898eaee" x="28" y="0" width="53" height="31"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[KODE BARANG	]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="64eed643-882b-490b-aacd-97c69898eaee" x="81" y="1" width="61" height="31"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[MERK]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="64eed643-882b-490b-aacd-97c69898eaee" x="142" y="0" width="80" height="31"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TIPE/ MODEL BARANG	]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="64eed643-882b-490b-aacd-97c69898eaee" x="341" y="0" width="60" height="31"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DEPT	]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="64eed643-882b-490b-aacd-97c69898eaee" x="404" y="0" width="69" height="31"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NO. PO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="64eed643-882b-490b-aacd-97c69898eaee" x="473" y="1" width="82" height="31"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[STATUS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="64eed643-882b-490b-aacd-97c69898eaee" x="0" y="0" width="28" height="31"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="64eed643-882b-490b-aacd-97c69898eaee" x="277" y="0" width="64" height="31"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PERUSAHAAN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="64eed643-882b-490b-aacd-97c69898eaee" x="222" y="0" width="55" height="31"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LOKASI]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="41" splitType="Stretch">
+			<textField>
+				<reportElement uuid="7be9d453-9675-4569-90d5-5d2a6daef593" x="28" y="2" width="53" height="39"/>
+				<textElement textAlignment="Center">
+					<paragraph leftIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{trans_barang_kode}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="97feaced-a07a-4bb9-a909-4ecca510a247" x="341" y="2" width="60" height="39"/>
+				<textElement textAlignment="Center">
+					<paragraph leftIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{department_nama}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="46850cea-074f-4b38-b2dc-bce546334a85" x="142" y="2" width="80" height="39"/>
+				<textElement textAlignment="Center">
+					<paragraph leftIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{barang_nama}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="44f67acd-caf9-48cd-b8cb-04128c15f38a" x="81" y="2" width="61" height="39"/>
+				<textElement textAlignment="Center">
+					<paragraph leftIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{merk_nama}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="bcdd8c40-8995-4266-a183-56f4e561543e" x="401" y="2" width="72" height="39"/>
+				<textElement textAlignment="Center">
+					<paragraph leftIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{trans_barang_no_po}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="683664b8-7e28-481b-bc09-f2f66a8f6a0d" x="473" y="2" width="82" height="39"/>
+				<textElement textAlignment="Center">
+					<paragraph leftIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{trans_barang_status}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="dff2da5c-56a7-4d92-96b8-3e8642f05bf1" x="0" y="2" width="28" height="38"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$V{nourut}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="ecc83d65-7b11-426f-a4d4-a9ccee203391" x="277" y="2" width="64" height="38"/>
+				<textElement textAlignment="Center">
+					<paragraph leftIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{perusahaan_nama}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="e230f99f-a67e-424b-bd43-9c72e5374811" x="222" y="2" width="55" height="38"/>
+				<textElement textAlignment="Center">
+					<paragraph leftIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{lokasi_nama}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
