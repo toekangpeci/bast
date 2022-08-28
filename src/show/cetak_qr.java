@@ -274,6 +274,7 @@ public String a,b,c,d,e,f,kode;
         txt_kategori1.setText("        Kode Barang");
 
         txt_kode.setForeground(new java.awt.Color(9, 10, 54));
+        txt_kode.setText("titit");
 
         b_simpan1.setBackground(new java.awt.Color(9, 10, 54));
         b_simpan1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -1092,7 +1093,7 @@ public String a,b,c,d,e,f,kode;
         String dsql="select kode from perusahaan where nama='"+per+"'";
         String esql="select kode from lokasi where nama='"+lok+"'";
         String fsql="select kode from department where nama='"+dep+"'";
-        
+        String asu="titit";
         try{
             Statement st = conn.createStatement(); 
             if (kat.equals("Select All")){

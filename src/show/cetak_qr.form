@@ -191,6 +191,7 @@
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="36" green="a" red="9" type="rgb"/>
                 </Property>
+                <Property name="text" type="java.lang.String" value="titit"/>
               </Properties>
             </Component>
             <Container class="javax.swing.JPanel" name="b_simpan1">
