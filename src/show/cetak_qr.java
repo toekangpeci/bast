@@ -24,7 +24,7 @@ import net.sf.jasperreports.view.JasperViewer;
  */ 
 public class cetak_qr extends javax.swing.JFrame {
 private Connection conn = new koneksi().connect();
-public String a,b,c,d,e,f,kode;
+public String a,b,c,d,e,f,kode,query;
 
 //public home datab=null;
 
@@ -39,26 +39,39 @@ public String a,b,c,d,e,f,kode;
         combo_perusahaan();
     }
     
-    public void cetak_qr(){   
+   public void cetak_qr(){
         try{
             String path="./src/report/cetakQR.jasper";
             HashMap parameter = new HashMap();
-            parameter.put("kode_barang",kode);
-            parameter.put("kode_kategori",a);
-            parameter.put("kode_merk",b);
-            parameter.put("kode_tipe",c);
-            parameter.put("kode_perusahaan",d);
-            parameter.put("kode_lokasi",e);
-            parameter.put("kode_dept",f);
+            parameter.put("query",query);
             JasperPrint print = JasperFillManager.fillReport(path,parameter,conn);
-            JasperViewer.viewReport(print,false);}
+            JasperViewer.viewReport(print,false);
+        }
         catch (Exception ex){
                 JOptionPane.showMessageDialog(null,"DOKUMEN TIDAK ADA"+ex);
         }
-        
     }
 
-    
+//    public void combo_tipe(){
+//        String a = cb_merk.getSelectedItem().toString();
+//        cb_tipe.removeAllItems();
+//        cb_tipe.addItem("Select All");  
+//        String asql="select kode from merk where nama='"+a+"'";  
+//        try { 
+//            String b="";
+//            Statement st = conn.createStatement(); ResultSet rs = st.executeQuery(asql); 
+//            while (rs.next()){b=rs.getString("kode");}
+//            
+//            String sql = "select nama from barang where kode_merk='"+b+"'";           
+//            Statement s = conn.createStatement();
+//            ResultSet r = s.executeQuery(sql); 
+//            while (r.next()) {
+//                cb_tipe.addItem(r.getString(1));
+//            }
+//        } catch (Exception e) {
+//        }         
+//    }
+       
     
     public void combo_kategori(){
         cb_kategori.removeAllItems();
@@ -106,7 +119,7 @@ public String a,b,c,d,e,f,kode;
             Statement st = conn.createStatement(); ResultSet rs = st.executeQuery(asql); 
             while (rs.next()){b=rs.getString("kode");}
             
-            String sql = "select nama from barang where kode_merk='"+b+"' and nama='%"+c+"%'";           
+            String sql = "select nama from barang where kode_merk='"+b+"";           
             Statement s = conn.createStatement();
             ResultSet r = s.executeQuery(sql); 
             while (r.next()) {
@@ -208,7 +221,6 @@ public String a,b,c,d,e,f,kode;
         jPanel8 = new javax.swing.JPanel();
         txt_kategori3 = new javax.swing.JLabel();
         cb_dept = new javax.swing.JComboBox<>();
-        cb_dept1 = new javax.swing.JComboBox<>();
         b_simpan3 = new javax.swing.JPanel();
         jLabel26 = new javax.swing.JLabel();
         jPanel10 = new javax.swing.JPanel();
@@ -231,7 +243,6 @@ public String a,b,c,d,e,f,kode;
         cb_tipe = new javax.swing.JComboBox<>();
         b_simpan7 = new javax.swing.JPanel();
         jLabel30 = new javax.swing.JLabel();
-        cb_tipe1 = new javax.swing.JComboBox<>();
 
         setResizable(false);
         addWindowListener(new java.awt.event.WindowAdapter() {
@@ -254,7 +265,7 @@ public String a,b,c,d,e,f,kode;
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(98, 98, 98)
+                .addGap(50, 50, 50)
                 .addComponent(jLabel16)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -274,7 +285,6 @@ public String a,b,c,d,e,f,kode;
         txt_kategori1.setText("        Kode Barang");
 
         txt_kode.setForeground(new java.awt.Color(9, 10, 54));
-        txt_kode.setText("titit");
 
         b_simpan1.setBackground(new java.awt.Color(9, 10, 54));
         b_simpan1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -528,23 +538,6 @@ public String a,b,c,d,e,f,kode;
             }
         });
 
-        cb_dept1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select All" }));
-        cb_dept1.addItemListener(new java.awt.event.ItemListener() {
-            public void itemStateChanged(java.awt.event.ItemEvent evt) {
-                cb_dept1ItemStateChanged(evt);
-            }
-        });
-        cb_dept1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                cb_dept1MouseClicked(evt);
-            }
-        });
-        cb_dept1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cb_dept1ActionPerformed(evt);
-            }
-        });
-
         b_simpan3.setBackground(new java.awt.Color(9, 10, 54));
         b_simpan3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -583,12 +576,10 @@ public String a,b,c,d,e,f,kode;
         jPanel8Layout.setHorizontalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel8Layout.createSequentialGroup()
-                .addComponent(txt_kategori3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(cb_dept, 0, 209, Short.MAX_VALUE)
-                    .addComponent(cb_dept1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(txt_kategori3, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(cb_dept, javax.swing.GroupLayout.PREFERRED_SIZE, 242, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(b_simpan3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0))
         );
@@ -599,8 +590,6 @@ public String a,b,c,d,e,f,kode;
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(cb_dept, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
                     .addComponent(txt_kategori3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(cb_dept1, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
                 .addContainerGap())
             .addComponent(b_simpan3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
@@ -888,23 +877,6 @@ public String a,b,c,d,e,f,kode;
             .addComponent(jLabel30, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
         );
 
-        cb_tipe1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select All" }));
-        cb_tipe1.addItemListener(new java.awt.event.ItemListener() {
-            public void itemStateChanged(java.awt.event.ItemEvent evt) {
-                cb_tipe1ItemStateChanged(evt);
-            }
-        });
-        cb_tipe1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                cb_tipe1MouseClicked(evt);
-            }
-        });
-        cb_tipe1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cb_tipe1ActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout jPanel13Layout = new javax.swing.GroupLayout(jPanel13);
         jPanel13.setLayout(jPanel13Layout);
         jPanel13Layout.setHorizontalGroup(
@@ -912,12 +884,9 @@ public String a,b,c,d,e,f,kode;
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel13Layout.createSequentialGroup()
                 .addComponent(txt_kategori7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(41, 41, 41)
-                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(cb_tipe1, javax.swing.GroupLayout.PREFERRED_SIZE, 242, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel13Layout.createSequentialGroup()
-                        .addComponent(cb_tipe, javax.swing.GroupLayout.PREFERRED_SIZE, 242, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(61, 61, 61)
-                        .addComponent(b_simpan7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addComponent(cb_tipe, javax.swing.GroupLayout.PREFERRED_SIZE, 242, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(61, 61, 61)
+                .addComponent(b_simpan7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(30, 30, 30))
         );
         jPanel13Layout.setVerticalGroup(
@@ -927,9 +896,7 @@ public String a,b,c,d,e,f,kode;
                 .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(cb_tipe, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
                     .addComponent(txt_kategori7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(cb_tipe1, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
-                .addGap(7, 7, 7))
+                .addContainerGap())
             .addGroup(jPanel13Layout.createSequentialGroup()
                 .addComponent(b_simpan7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
@@ -1020,7 +987,9 @@ public String a,b,c,d,e,f,kode;
     }//GEN-LAST:event_formWindowOpened
 
     private void cb_perusahaanItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_cb_perusahaanItemStateChanged
-        // TODO add your handling code here:
+        // TODO add your handling code here: trans_barang.kode_dept,department.nama
+        
+        
     }//GEN-LAST:event_cb_perusahaanItemStateChanged
 
     private void cb_perusahaanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cb_perusahaanActionPerformed
@@ -1067,6 +1036,7 @@ public String a,b,c,d,e,f,kode;
 
     private void cb_tipeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cb_tipeActionPerformed
         // TODO add your handling code here:
+        combo_tipe();
         
     }//GEN-LAST:event_cb_tipeActionPerformed
 
@@ -1086,6 +1056,7 @@ public String a,b,c,d,e,f,kode;
         per=cb_perusahaan.getSelectedItem().toString();
         lok=cb_lokasi.getSelectedItem().toString();
         dep=cb_dept.getSelectedItem().toString();
+        int count=0;
         
         String asql="select kode from kategori where nama='"+kat+"'";
         String bsql="select kode from merk where nama='"+mer+"'";
@@ -1093,64 +1064,65 @@ public String a,b,c,d,e,f,kode;
         String dsql="select kode from perusahaan where nama='"+per+"'";
         String esql="select kode from lokasi where nama='"+lok+"'";
         String fsql="select kode from department where nama='"+dep+"'";
-        String asu="titit";
+        
+        query ="";
+        
         try{
             Statement st = conn.createStatement(); 
-            if (kat.equals("Select All")){
-                a="*";
-            }
+            if (kat.equals("Select All")){}
             else {
-                ResultSet rs = st.executeQuery(asql); 
+            ResultSet rs = st.executeQuery(asql); 
             while (rs.next()){a=(rs.getString(1));}
+            if (count==0){query=query+"where trans_barang.kode_kategori='"+a+"'"; count=count+1;} else {query=query+" trans_barang.kode_kategori='"+a+"'";}
             }
-
-             if (mer.equals("Select All")){
-                b="*";
-            }
+            
+            
+            if (mer.equals("Select All")){}
             else {
             ResultSet brs = st.executeQuery(bsql); 
             while (brs.next()){b=(brs.getString(1));}
+            if (count==0){query=query+" trans_barang.kode_merk='"+b+"'"; count=count+1;} else {query=query+" and trans_barang.kode_merk='"+b+"'";}
             }
             
-             if (tip.equals("Select All")){
-                c="*";
-            }
+            
+            if (tip.equals("Select All")){}
             else {
             ResultSet crs = st.executeQuery(csql); 
             while (crs.next()){c=(crs.getString(1));}
+            if (count==0){query=query+"where trans_barang_kode_barang='"+c+"'"; count=count+1;} else {query=query+" and trans_barang_kode_barang='"+c+"'";}
             }
-             
-             if (per.equals("Select All")){
-                d="*";
-            }
+            
+            
+            if (per.equals("Select All")){}
             else {
             ResultSet drs = st.executeQuery(dsql); 
             while (drs.next()){d=(drs.getString(1));}
+            if (count==0){query=query+"where trans_barang_kode_perusahaan='"+d+"'"; count=count+1;} else {query=query+" and trans_barang_kode_perusahaan='"+d+"'";}
             }
         
-             if (lok.equals("Select All")){
-                e="*";
-            }
+            if (lok.equals("Select All")){}
             else {
             ResultSet ers = st.executeQuery(esql); 
             while (ers.next()){e=(ers.getString(1));}
+            if (count==0){query=query+"where trans_barang_kode_lokasi='"+e+"'"; count=count+1;} else {query=query+" and trans_barang_kode_lokasi='"+e+"'";}
             }
         
-             if (dep.equals("Select All")){
-                f="*";
-            }
+             if (dep.equals("Select All")){}
             else {
             ResultSet frs = st.executeQuery(fsql); 
             while (frs.next()){f=(frs.getString(1));}
+            if (count==0){query=query+"where trans_barang_kode_dept='"+f+"'"; count=count+1;} else {query=query+" and trans_barang_kode_dept='"+f+"'";}
             }
         
         }
+        
         catch (SQLException er){
             JOptionPane.showMessageDialog(null,"data gagal diraih : "+ er);
         }
         
+        //JOptionPane.showMessageDialog(rootPane, query);
         cetak_qr();
-        
+        System.out.println(query);
     }//GEN-LAST:event_jLabel22MouseClicked
 
     private void cb_merkMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cb_merkMouseClicked
@@ -1167,18 +1139,6 @@ public String a,b,c,d,e,f,kode;
         // TODO add your handling code here:
         combo_tipe();
     }//GEN-LAST:event_cb_tipeMouseClicked
-
-    private void cb_dept1ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_cb_dept1ItemStateChanged
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cb_dept1ItemStateChanged
-
-    private void cb_dept1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cb_dept1MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cb_dept1MouseClicked
-
-    private void cb_dept1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cb_dept1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cb_dept1ActionPerformed
 
     private void jLabel23MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel23MouseClicked
         // TODO add your handling code here:
@@ -1236,18 +1196,6 @@ public String a,b,c,d,e,f,kode;
         // TODO add your handling code here:
     }//GEN-LAST:event_b_simpan7MouseClicked
 
-    private void cb_tipe1ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_cb_tipe1ItemStateChanged
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cb_tipe1ItemStateChanged
-
-    private void cb_tipe1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cb_tipe1MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cb_tipe1MouseClicked
-
-    private void cb_tipe1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cb_tipe1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cb_tipe1ActionPerformed
-
     /**
      * @param args the command line arguments
      */
@@ -1263,13 +1211,11 @@ public String a,b,c,d,e,f,kode;
     private javax.swing.JPanel b_simpan6;
     private javax.swing.JPanel b_simpan7;
     private javax.swing.JComboBox<String> cb_dept;
-    private javax.swing.JComboBox<String> cb_dept1;
     private javax.swing.JComboBox<String> cb_kategori;
     private javax.swing.JComboBox<String> cb_lokasi;
     private javax.swing.JComboBox<String> cb_merk;
     private javax.swing.JComboBox<String> cb_perusahaan;
     private javax.swing.JComboBox<String> cb_tipe;
-    private javax.swing.JComboBox<String> cb_tipe1;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel22;

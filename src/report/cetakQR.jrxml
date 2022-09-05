@@ -3,54 +3,58 @@
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
-	<parameter name="kode_perusahaan" class="java.lang.String"/>
-	<parameter name="kode_dept" class="java.lang.String"/>
-	<parameter name="kode_lokasi" class="java.lang.String"/>
-	<parameter name="kode_merk" class="java.lang.String"/>
-	<parameter name="kode_tipe" class="java.lang.String"/>
-	<parameter name="kode_kategori" class="java.lang.String"/>
-	<parameter name="kode_barang" class="java.lang.String"/>
+	<parameter name="query" class="java.lang.String"/>
 	<queryString>
 		<![CDATA[SELECT
+     barang.`kode` AS barang_kode,
+     barang.`nama` AS barang_nama,
      trans_barang.`kode` AS trans_barang_kode,
      trans_barang.`kode_kategori` AS trans_barang_kode_kategori,
      trans_barang.`kode_merk` AS trans_barang_kode_merk,
+     trans_barang.`kode_barang` AS trans_barang_kode_barang,
      trans_barang.`kode_perusahaan` AS trans_barang_kode_perusahaan,
      trans_barang.`kode_lokasi` AS trans_barang_kode_lokasi,
      trans_barang.`kode_dept` AS trans_barang_kode_dept,
+     trans_barang.`kode_vendor` AS trans_barang_kode_vendor,
+     department.`kode` AS department_kode,
+     department.`nama` AS department_nama,
      kategori.`kode` AS kategori_kode,
      kategori.`nama` AS kategori_nama,
+     lokasi.`kode` AS lokasi_kode,
+     lokasi.`nama` AS lokasi_nama,
      merk.`kode` AS merk_kode,
      merk.`nama` AS merk_nama,
      perusahaan.`kode` AS perusahaan_kode,
-     perusahaan.`nama` AS perusahaan_nama,
-     lokasi.`kode` AS lokasi_kode,
-     lokasi.`nama` AS lokasi_nama,
-     department.`kode` AS department_kode,
-     department.`nama` AS department_nama
+     perusahaan.`nama` AS perusahaan_nama
 FROM
      `trans_barang` trans_barang INNER JOIN `perusahaan` perusahaan ON trans_barang.`kode_perusahaan` = perusahaan.`kode`
      INNER JOIN `department` department ON trans_barang.`kode_dept` = department.`kode`
+     INNER JOIN `merk` merk ON trans_barang.`kode_merk` = merk.`kode`
      INNER JOIN `lokasi` lokasi ON trans_barang.`kode_lokasi` = lokasi.`kode`
      INNER JOIN `kategori` kategori ON trans_barang.`kode_kategori` = kategori.`kode`
-     INNER JOIN `merk` merk ON trans_barang.`kode_merk` = merk.`kode`]]>
+     INNER JOIN `barang` barang ON trans_barang.`kode_barang` = barang.`kode`
+]]>
 	</queryString>
+	<field name="barang_kode" class="java.lang.Integer"/>
+	<field name="barang_nama" class="java.lang.String"/>
 	<field name="trans_barang_kode" class="java.lang.String"/>
 	<field name="trans_barang_kode_kategori" class="java.lang.Integer"/>
 	<field name="trans_barang_kode_merk" class="java.lang.Integer"/>
+	<field name="trans_barang_kode_barang" class="java.lang.Integer"/>
 	<field name="trans_barang_kode_perusahaan" class="java.lang.Integer"/>
 	<field name="trans_barang_kode_lokasi" class="java.lang.Integer"/>
 	<field name="trans_barang_kode_dept" class="java.lang.Integer"/>
+	<field name="trans_barang_kode_vendor" class="java.lang.Integer"/>
+	<field name="department_kode" class="java.lang.Integer"/>
+	<field name="department_nama" class="java.lang.String"/>
 	<field name="kategori_kode" class="java.lang.Integer"/>
 	<field name="kategori_nama" class="java.lang.String"/>
+	<field name="lokasi_kode" class="java.lang.Integer"/>
+	<field name="lokasi_nama" class="java.lang.String"/>
 	<field name="merk_kode" class="java.lang.Integer"/>
 	<field name="merk_nama" class="java.lang.String"/>
 	<field name="perusahaan_kode" class="java.lang.Integer"/>
 	<field name="perusahaan_nama" class="java.lang.String"/>
-	<field name="lokasi_kode" class="java.lang.Integer"/>
-	<field name="lokasi_nama" class="java.lang.String"/>
-	<field name="department_kode" class="java.lang.Integer"/>
-	<field name="department_nama" class="java.lang.String"/>
 	<variable name="tesqr" class="java.lang.String">
 		<variableExpression><![CDATA["kode assets : " + $F{trans_barang_kode} +
 "  -  Kategori : " + $F{kategori_nama} +

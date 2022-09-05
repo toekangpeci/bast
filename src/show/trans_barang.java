@@ -13,6 +13,10 @@ import java.awt.Dimension;
 import java.awt.Toolkit;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.HashMap;
+import net.sf.jasperreports.engine.JasperFillManager;
+import net.sf.jasperreports.engine.JasperPrint;
+import net.sf.jasperreports.view.JasperViewer;
 
 /**
  *
@@ -51,6 +55,7 @@ String strtime = timeformat.format(time);
         r_service.setEnabled(false);
         r_available.setSelected(true);
     };
+    
     
     public void combo(){ 
         cb_kategori.removeAllItems();
