@@ -11,11 +11,11 @@ import javax.swing.JOptionPane;
  *
  * @author nopal
  */
-public class koneksi {
+public class koneksi_ke_dbtimelang {
     private Connection koneksi;
     public Connection connect(){
         String db = "dbbast";
-        String url = "jdbc:mysql://localhost:3306/"+db+"";
+        String url = "jdbc:mysql://timelang.co:3306/"+db+"";
         try{
             Class.forName("com.mysql.jdbc.Driver");
             System.out.println("wait . .  is trying to reach "+url+"");            
@@ -25,7 +25,7 @@ public class koneksi {
         System.out.println("oh no, conection to database driver failure :( heres why : "+ex);
         }        
         try{
-            koneksi=DriverManager.getConnection(url,"root","");
+            koneksi=DriverManager.getConnection(url,"timelang_nopal","admin-timelang");
             System.out.println("Woohoo! is connected to database "+db+"! congrats! ;)");
           }
         catch (SQLException ex){

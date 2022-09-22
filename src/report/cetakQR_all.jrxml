@@ -3,7 +3,6 @@
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
-	<parameter name="query" class="java.lang.String"/>
 	<queryString>
 		<![CDATA[SELECT
      barang.`kode` AS barang_kode,
@@ -32,8 +31,7 @@ FROM
      INNER JOIN `merk` merk ON trans_barang.`kode_merk` = merk.`kode`
      INNER JOIN `lokasi` lokasi ON trans_barang.`kode_lokasi` = lokasi.`kode`
      INNER JOIN `kategori` kategori ON trans_barang.`kode_kategori` = kategori.`kode`
-     INNER JOIN `barang` barang ON trans_barang.`kode_barang` = barang.`kode`
-]]>
+     INNER JOIN `barang` barang ON trans_barang.`kode_barang` = barang.`kode`]]>
 	</queryString>
 	<field name="barang_kode" class="java.lang.Integer"/>
 	<field name="barang_nama" class="java.lang.String"/>
@@ -111,13 +109,6 @@ FROM
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{trans_barang_kode}]]></textFieldExpression>
 			</textField>
-			<image>
-				<reportElement uuid="0687b422-e4c3-46df-810d-680a9fa5cb5c" x="305" y="6" width="117" height="107"/>
-				<imageExpression><![CDATA[com.google.zxing.client.j2se.MatrixToImageWriter.toBufferedImage(
-new com.google.zxing.qrcode.QRCodeWriter().encode(
-$V{tesqr},
-com.google.zxing.BarcodeFormat.QR_CODE, 300, 300))]]></imageExpression>
-			</image>
 			<line>
 				<reportElement uuid="22b36535-87c7-4293-9e31-735290dd0076" x="76" y="124" width="426" height="1"/>
 				<graphicElement>
@@ -137,6 +128,13 @@ com.google.zxing.BarcodeFormat.QR_CODE, 300, 300))]]></imageExpression>
 			<image>
 				<reportElement uuid="c095ce2b-5371-47b7-bda7-ade23fbcb799" x="76" y="98" width="126" height="14"/>
 				<imageExpression><![CDATA["C:\\Users\\PAKUAN-IT\\Documents\\LOGO-PAKUAN-Tbk.jpg"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement uuid="0687b422-e4c3-46df-810d-680a9fa5cb5c" x="305" y="5" width="117" height="107"/>
+				<imageExpression><![CDATA[com.google.zxing.client.j2se.MatrixToImageWriter.toBufferedImage(
+new com.google.zxing.qrcode.QRCodeWriter().encode(
+$V{tesqr},
+com.google.zxing.BarcodeFormat.QR_CODE, 300, 300))]]></imageExpression>
 			</image>
 		</band>
 	</detail>
