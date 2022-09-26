@@ -286,6 +286,7 @@ public class home extends javax.swing.JFrame {
     
     
 protected void tab_perusahaan(){
+         tab_perusahaan.setAutoCreateRowSorter(true);
         Object[] Baris = {"kode","Nama Perusahaan","Alamat Perusahaan","Keterangan"};
         tabmode = new DefaultTableModel(null,Baris);
         String cariitem=txt_perusahaan.getText();
@@ -311,6 +312,7 @@ protected void tab_perusahaan(){
     }
 
 public void tab_department(){
+        tab_department.setAutoCreateRowSorter(true);
         Object[] Baris = {"kode","Nama Department","Perusahaan","Keterangan"};
         tabmode = new DefaultTableModel(null,Baris);
         String cariitem=txt_department.getText();
@@ -337,6 +339,7 @@ public void tab_department(){
     }
 
 protected void tab_lokasi(){
+        tab_lokasi.setAutoCreateRowSorter(true);
         Object[] Baris = {"kode","Nama Lokasi","Detail Lokasi","Keterangan"};
         tabmode = new DefaultTableModel(null,Baris);
         String cariitem=txt_lokasi.getText();
@@ -362,6 +365,7 @@ protected void tab_lokasi(){
     }
 
 protected void tab_vendor(){
+        tab_vendor.setAutoCreateRowSorter(true);
         Object[] Baris = {"kode","Nama","Bidang","CP","Alamat","Phone","Email","Keterangan"};
         tabmode = new DefaultTableModel(null,Baris);
         String cariitem=txt_vendor.getText();
@@ -391,6 +395,7 @@ protected void tab_vendor(){
     }
 
 protected void tab_kategori(){
+        tab_kategori.setAutoCreateRowSorter(true);
         Object[] Baris = {"kode","Nama Kategori","Keterangan"};
         tabmode = new DefaultTableModel(null,Baris);
         String cariitem=txt_kategori.getText();
@@ -414,6 +419,7 @@ protected void tab_kategori(){
     }
 
 public void tab_brands(){
+    tab_brands.setAutoCreateRowSorter(true);
         Object[] Baris = {"kode","Nama Brands/Merk","Kategori","Keterangan"};
         tabmode = new DefaultTableModel(null,Baris);
         String cariitem=txt_brands.getText();
@@ -440,6 +446,7 @@ public void tab_brands(){
     }
 
 public void tab_tipe(){
+        tab_tipe.setAutoCreateRowSorter(true);
         Object[] Baris = {"kode","Nama Tipe","Kategori","Brands/Merk","Keterangan"};
         tabmode = new DefaultTableModel(null,Baris);
         String cariitem=txt_tipe.getText();
@@ -468,6 +475,7 @@ public void tab_tipe(){
     }
 
 protected void tab_user(){
+        tab_user.setAutoCreateRowSorter(true);
         Object[] Baris = {"User ID","Nama","Level Akses"};
         tabmode = new DefaultTableModel(null,Baris);
         String cariitem=txt_user.getText();
@@ -491,6 +499,7 @@ protected void tab_user(){
     }
 
 protected void tab_transaksi(){
+        tab_transaksi.setAutoCreateRowSorter(true);
         Object[] Baris = {"Kode Assets","Kategori","Merk","Tipe","Perusahaan","Lokasi","Dept","Status"};
         tabmode = new DefaultTableModel(null,Baris);
         String cariitem=txt_transaksi.getText();

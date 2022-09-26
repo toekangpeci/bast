@@ -32,7 +32,47 @@ import classes.sql;
  */ 
 public class cetak_qr extends javax.swing.JFrame {
 private Connection conn = new koneksi().connect();
-public String a,b,c,d,e,f,kode,query,kode_barang,para;
+public String a,b,c,d,e,f,kode,kode_barang,para,query;
+HashMap<String,String> param = new HashMap<>();
+    String kat,mer,tip,per,lok,dep;
+    int count=0;
+       
+       
+       
+       
+       
+        
+         
+        
+
+ String siqil = "SELECT\n" +
+        "     barang.`kode` AS barang_kode,\n" +
+        "     barang.`nama` AS barang_nama,\n" +
+        "     trans_barang.`kode` AS trans_barang_kode,\n" +
+        "     trans_barang.`kode_kategori` AS trans_barang_kode_kategori,\n" +
+        "     trans_barang.`kode_merk` AS trans_barang_kode_merk,\n" +
+        "     trans_barang.`kode_barang` AS trans_barang_kode_barang,\n" +
+        "     trans_barang.`kode_perusahaan` AS trans_barang_kode_perusahaan,\n" +
+        "     trans_barang.`kode_lokasi` AS trans_barang_kode_lokasi,\n" +
+        "     trans_barang.`kode_dept` AS trans_barang_kode_dept,\n" +
+        "     trans_barang.`kode_vendor` AS trans_barang_kode_vendor,\n" +
+        "     department.`kode` AS department_kode,\n" +
+        "     department.`nama` AS department_nama,\n" +
+        "     kategori.`kode` AS kategori_kode,\n" +
+        "     kategori.`nama` AS kategori_nama,\n" +
+        "     lokasi.`kode` AS lokasi_kode,\n" +
+        "     lokasi.`nama` AS lokasi_nama,\n" +
+        "     merk.`kode` AS merk_kode,\n" +
+        "     merk.`nama` AS merk_nama,\n" +
+        "     perusahaan.`kode` AS perusahaan_kode,\n" +
+        "     perusahaan.`nama` AS perusahaan_nama\n" +
+        "FROM\n" +
+        "     `trans_barang` trans_barang INNER JOIN `perusahaan` perusahaan ON trans_barang.`kode_perusahaan` = perusahaan.`kode`\n" +
+        "     INNER JOIN `department` department ON trans_barang.`kode_dept` = department.`kode`\n" +
+        "     INNER JOIN `merk` merk ON trans_barang.`kode_merk` = merk.`kode`\n" +
+        "     INNER JOIN `lokasi` lokasi ON trans_barang.`kode_lokasi` = lokasi.`kode`\n" +
+        "     INNER JOIN `kategori` kategori ON trans_barang.`kode_kategori` = kategori.`kode`\n" +
+        "     INNER JOIN `barang` barang ON trans_barang.`kode_barang` = barang.`kode` ";
 
 //public home datab=null;
 
@@ -45,6 +85,8 @@ public String a,b,c,d,e,f,kode,query,kode_barang,para;
         combo_kategori();
         combo_lokasi();
         combo_perusahaan();
+
+       
     }
     
     public void itemTerpilih(String kode_barang) {
@@ -56,58 +98,48 @@ public String a,b,c,d,e,f,kode,query,kode_barang,para;
     
    
    public void cetak_qr_para_code(){
-        
-        classes.sql p_code = new classes.sql(); 
          para=txt_kode.getText();
-        p_code.a=txt_kode.getText();
-        String Query2 = p_code.para_kode;
-        
-        classes.sql sikil = new classes.sql();
-        sikil.a = para;
-        sikil.getPara(para); 
-////        this.dispose();
-////        a.setVisible(true);
-//        
-        try{
-            
+         siqil = siqil+" where trans_barang.kode in ("+para+");";
+
+        try{             
             String path="./src/report/cetakQR_all.jrxml";
             JasperDesign jd2=JRXmlLoader.load(path);
-            HashMap parameter = new HashMap();
+            HashMap parameter = new HashMap<>();
             JRDesignQuery newQuery2 = new JRDesignQuery();
-            newQuery2.setText(Query2); 
+            newQuery2.setText(siqil); 
             jd2.setQuery(newQuery2);
+        
             JasperReport jr2=JasperCompileManager.compileReport(jd2);
-            JasperPrint print2 = JasperFillManager.fillReport(jr2,parameter,conn);            
+            JasperPrint print2 = JasperFillManager.fillReport(jr2,null,conn);            
             JasperViewer.viewReport(print2,false);    
         }
         catch (Exception ex){
                 JOptionPane.showMessageDialog(null,"DOKUMEN TIDAK ADA : "+ex);
         }
-        System.out.println(Query2);
+//        System.out.println(Query2);
+        
     }
    
    public void cetak_qr_all(){
-        classes.sql sikil = new classes.sql();            
-        String Query = sikil.select_all;
-        
+        // para=txt_kode.getText();
+         //siqil = siqil+" where trans_barang.kode in ("+para+");";
 
-        try{
-            
+        try{             
             String path="./src/report/cetakQR_all.jrxml";
-            JasperDesign jd=JRXmlLoader.load(path);
-            HashMap parameter = new HashMap();
-            JRDesignQuery newQuery = new JRDesignQuery();
-            newQuery.setText(Query); 
-            jd.setQuery(newQuery);
-            JasperReport jr=JasperCompileManager.compileReport(jd);
-            JasperPrint print = JasperFillManager.fillReport(jr,null,conn);            
-            JasperViewer.viewReport(print,false);
-            
+            JasperDesign jd2=JRXmlLoader.load(path);
+            HashMap parameter = new HashMap<>();
+            JRDesignQuery newQuery2 = new JRDesignQuery();
+            newQuery2.setText(query); 
+            jd2.setQuery(newQuery2);
+        
+            JasperReport jr2=JasperCompileManager.compileReport(jd2);
+            JasperPrint print2 = JasperFillManager.fillReport(jr2,null,conn);            
+            JasperViewer.viewReport(print2,false);    
         }
         catch (Exception ex){
                 JOptionPane.showMessageDialog(null,"DOKUMEN TIDAK ADA : "+ex);
         }
-    }
+   }
    
 
        
@@ -150,15 +182,14 @@ public String a,b,c,d,e,f,kode,query,kode_barang,para;
     public void combo_tipe(){
         String a = cb_merk.getSelectedItem().toString();
         cb_tipe.removeAllItems();
-        cb_tipe.addItem("Select All");
-        String c= cb_tipe.getSelectedItem().toString();
+        cb_tipe.addItem(" - Pilih Tipe Barang - ");  
         String asql="select kode from merk where nama='"+a+"'";  
         try { 
             String b="";
             Statement st = conn.createStatement(); ResultSet rs = st.executeQuery(asql); 
             while (rs.next()){b=rs.getString("kode");}
             
-            String sql = "select nama from barang where kode_merk='"+b+"";           
+            String sql = "select nama from barang where kode_merk='"+b+"'";           
             Statement s = conn.createStatement();
             ResultSet r = s.executeQuery(sql); 
             while (r.next()) {
@@ -228,8 +259,118 @@ public String a,b,c,d,e,f,kode,query,kode_barang,para;
        cb_lokasi.setSelectedItem("Select All");
     };
     
+    public void para_1(){
+         kat=cb_kategori.getSelectedItem().toString();
+         String asql="select kode from kategori where nama='"+kat+"'";
+    try{         
+            Statement st = conn.createStatement(); 
+            if (kat.equals("Select All")){}
+            else {
+            ResultSet rs = st.executeQuery(asql); 
+            while (rs.next()){a=(rs.getString(1));}
+            if (count==0){query=siqil+"where trans_barang.kode_kategori='"+a+"'"; count=count+1;} else {query=siqil+" trans_barang.kode_kategori='"+a+"'";}
+            }}
+            catch (SQLException er){
+            JOptionPane.showMessageDialog(null,"data gagal diraih : "+ er);
+            }
+    }
+    
+    public void para_2(){
+         mer=cb_merk.getSelectedItem().toString();
+         String bsql="select kode from merk where nama='"+mer+"'";
+    try{
+            Statement st = conn.createStatement(); 
+            if (mer.equals("Select All")){}
+            else {
+            ResultSet brs = st.executeQuery(bsql); 
+            while (brs.next()){b=(brs.getString(1));}
+            if (count==0){query=siqil+"where trans_barang.kode_merk='"+b+"'"; count=count+1;} else {query=query+" and trans_barang.kode_merk='"+b+"'";}
+            }}
+            catch (SQLException er){
+            JOptionPane.showMessageDialog(null,"data gagal diraih : "+ er);
+            }
+    }
+    
+    public void para_3(){
+         tip=cb_tipe.getSelectedItem().toString();
+         String csql="select kode from barang where nama='"+tip+"'";
+    try{
+             Statement st = conn.createStatement();
+              if (tip.equals("Select All")){}
+            else {
+            ResultSet crs = st.executeQuery(csql); 
+            while (crs.next()){c=(crs.getString(1));}
+            if (count==0){query=siqil+"where trans_barang.kode_barang='"+c+"'"; count=count+1;} else {query=query+" and trans_barang.kode_barang='"+c+"'";}
+            }}
+    
+            catch (SQLException er){
+            JOptionPane.showMessageDialog(null,"data gagal diraih : "+ er);
+            }
+    }
+    
+    public void para_4(){
+         per=cb_perusahaan.getSelectedItem().toString();
+         String dsql="select kode from perusahaan where nama='"+per+"'";
+        try{
+             Statement st = conn.createStatement();
+        if (per.equals("Select All")){}
+            else {
+            ResultSet drs = st.executeQuery(dsql); 
+            while (drs.next()){d=(drs.getString(1));}
+            if (count==0){query=siqil+"where trans_barang.kode_perusahaan='"+d+"'"; count=count+1;} else {query=query+" and trans_barang.kode_perusahaan='"+d+"'";}
+            }}
+        catch (SQLException er){
+            JOptionPane.showMessageDialog(null,"data gagal diraih : "+ er);
+            }   
+    }
+    
+        public void para_5(){
+             lok=cb_lokasi.getSelectedItem().toString();
+              String esql="select kode from lokasi where nama='"+lok+"'";
+            try{
+                Statement st = conn.createStatement();
+        if (lok.equals("Select All")){}
+            else {
+            ResultSet ers = st.executeQuery(esql); 
+            while (ers.next()){e=(ers.getString(1));}
+            if (count==0){query=siqil+"where trans_barang.kode_lokasi='"+e+"'"; count=count+1;} else {query=query+" and trans_barang.kode_lokasi='"+e+"'";}
+            }}
+              catch (SQLException er){
+            JOptionPane.showMessageDialog(null,"data gagal diraih : "+ er);
+            } 
+        }
+        
+        public void para_6(){
+            dep=cb_dept.getSelectedItem().toString();
+            String fsql="select kode from department where nama='"+dep+"'";
+        try{
+            Statement st = conn.createStatement();
+            if (dep.equals("Select All")){}
+            else {
+            ResultSet frs = st.executeQuery(fsql); 
+            while (frs.next()){f=(frs.getString(1));}
+            if (count==0){query=siqil+"where trans_barang.kode_dept='"+f+"'"; count=count+1;} else {query=query+" and trans_barang.kode_dept='"+f+"'";}
+            }
+        }
+        catch (SQLException er){
+            JOptionPane.showMessageDialog(null,"data gagal diraih : "+ er);
+            } 
+        }
+    
+    
     
 //tempat sampah nya nopal
+ 
+    //        classes.sql p_code = new classes.sql(); 
+  //       para=txt_kode.getText();
+//        p_code.a=txt_kode.getText();
+        
+//        classes.sql sikil = new classes.sql();
+//        sikil.a = para;
+//        sikil.getPara(para); 
+//        String Query2 = p_code.para_kode;
+    
+    
     //        byte[] bytes = Query.getBytes(StandardCharsets.UTF_8);
 //
 //        String query_utf8 = new String(bytes, StandardCharsets.UTF_8);
@@ -921,9 +1062,7 @@ public String a,b,c,d,e,f,kode,query,kode_barang,para;
     }//GEN-LAST:event_cb_tipeItemStateChanged
 
     private void cb_tipeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cb_tipeActionPerformed
-        // TODO add your handling code here:
-        combo_tipe();
-        
+        // TODO add your handling code here:       
     }//GEN-LAST:event_cb_tipeActionPerformed
 
     private void jLabel17MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel17MouseClicked
@@ -932,83 +1071,20 @@ public String a,b,c,d,e,f,kode,query,kode_barang,para;
     }//GEN-LAST:event_jLabel17MouseClicked
 
     private void jLabel22MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel22MouseClicked
-        // TODO add your handling code here:
-//        
-//        kode=txt_kode.getText();
-//        String kat,mer,tip,per,lok,dep;
-//        kat=cb_kategori.getSelectedItem().toString();
-//        mer=cb_merk.getSelectedItem().toString();
-//        tip=cb_tipe.getSelectedItem().toString();
-//        per=cb_perusahaan.getSelectedItem().toString();
-//        lok=cb_lokasi.getSelectedItem().toString();
-//        dep=cb_dept.getSelectedItem().toString();
-//        int count=0;
-//        
-//        String asql="select kode from kategori where nama='"+kat+"'";
-//        String bsql="select kode from merk where nama='"+mer+"'";
-//        String csql="select kode from barang where nama='"+tip+"'";
-//        String dsql="select kode from perusahaan where nama='"+per+"'";
-//        String esql="select kode from lokasi where nama='"+lok+"'";
-//        String fsql="select kode from department where nama='"+dep+"'";
-//        
-//        query ="";
-//        
-//        try{
-////            Statement st = conn.createStatement(); 
-//            if (kat.equals("Select All")){}
-//            else {
-//            ResultSet rs = st.executeQuery(asql); 
-//            while (rs.next()){a=(rs.getString(1));}
-//            if (count==0){query=query+"where trans_barang.kode_kategori='"+a+"'"; count=count+1;} else {query=query+" trans_barang.kode_kategori='"+a+"'";}
-//            }
-//            
-//            
-//            if (mer.equals("Select All")){}
-//            else {
-//            ResultSet brs = st.executeQuery(bsql); 
-//            while (brs.next()){b=(brs.getString(1));}
-//            if (count==0){query=query+" trans_barang.kode_merk='"+b+"'"; count=count+1;} else {query=query+" OR trans_barang.kode_merk='"+b+"'";}
-//            }
-//            
-//            
-//            if (tip.equals("Select All")){}
-//            else {
-//            ResultSet crs = st.executeQuery(csql); 
-//            while (crs.next()){c=(crs.getString(1));}
-//            if (count==0){query=query+"where trans_barang_kode_barang='"+c+"'"; count=count+1;} else {query=query+" and trans_barang_kode_barang='"+c+"'";}
-//            }
-//            
-//            
-//            if (per.equals("Select All")){}
-//            else {
-//            ResultSet drs = st.executeQuery(dsql); 
-//            while (drs.next()){d=(drs.getString(1));}
-//            if (count==0){query=query+"where trans_barang_kode_perusahaan='"+d+"'"; count=count+1;} else {query=query+" and trans_barang_kode_perusahaan='"+d+"'";}
-//            }
-//        
-//            if (lok.equals("Select All")){}
-//            else {
-//            ResultSet ers = st.executeQuery(esql); 
-//            while (ers.next()){e=(ers.getString(1));}
-//            if (count==0){query=query+"where trans_barang_kode_lokasi='"+e+"'"; count=count+1;} else {query=query+" and trans_barang_kode_lokasi='"+e+"'";}
-//            }
-//        
-//             if (dep.equals("Select All")){}
-//            else {
-//            ResultSet frs = st.executeQuery(fsql); 
-//            while (frs.next()){f=(frs.getString(1));}
-//            if (count==0){query=query+"where trans_barang_kode_dept='"+f+"'"; count=count+1;} else {query=query+" and trans_barang_kode_dept='"+f+"'";}
-//            }
-//        
-//        }
-//        
-//        catch (SQLException er){
-//            JOptionPane.showMessageDialog(null,"data gagal diraih : "+ er);
-//        }
-//        
-        //JOptionPane.showMessageDialog(rootPane, query);
+        // TODO add your handling code here
+      
+           // query=siqil;
+        para_1();
+        para_2();
+        para_3();
+        para_4();
+        para_5();
+        para_6();
+        
         cetak_qr_all();
-//        System.out.println(query);
+        count=0;
+        System.out.println(query);
+        
     }//GEN-LAST:event_jLabel22MouseClicked
 
     private void cb_merkMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cb_merkMouseClicked

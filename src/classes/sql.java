@@ -9,6 +9,7 @@ import groovyjarjarantlr.ByteBuffer;
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
 import show.cetak_qr;
+import java.util.HashMap;
 
 
 /**
@@ -22,15 +23,20 @@ public class sql {
     private static final Charset UTF_8 = Charset.forName("UTF-8");
     private static final Charset ISO = Charset.forName("ISO-8859-1");
     public String a;
-   
+    
+    
     
     public void getPara(String para) {
         show.cetak_qr sikil = new show.cetak_qr();        
      //   sikil.para = this;
         a=para;
+        System.out.println(para);
+        System.out.println(a);
+
     }
     
     show.cetak_qr sikil=new show.cetak_qr();
+    
     public String para_kode= "SELECT\n" +
 "     barang.`kode` AS barang_kode,\n" +
 "     barang.`nama` AS barang_nama,\n" +
