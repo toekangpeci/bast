@@ -37,12 +37,6 @@ HashMap<String,String> param = new HashMap<>();
     String kat,mer,tip,per,lok,dep;
     int count=0;
        
-       
-       
-       
-       
-        
-         
         
 
  String siqil = "SELECT\n" +
@@ -98,10 +92,13 @@ HashMap<String,String> param = new HashMap<>();
     
    
    public void cetak_qr_para_code(){
-         para=txt_kode.getText();
-        
-         x = siqil+" where trans_barang.kode in ("+para+");";
-
+         para=txt_kode.getText();        
+         
+         if ((txt_kode.getText().equals("Select All")) || (txt_kode.getText().equals("")) ){
+                x=siqil;
+         }
+         else { x = siqil+" where trans_barang.kode in ("+para+");"; }
+         
         try{             
             String path="./src/report/cetakQR_all.jrxml";
             JasperDesign jd2=JRXmlLoader.load(path);
@@ -122,11 +119,9 @@ HashMap<String,String> param = new HashMap<>();
     }
    
    public void cetak_qr_all(){
-        // para=txt_kode.getText();
-         //siqil = siqil+" where trans_barang.kode in ("+para+");";
 
         try{             
-            String path="./src/report/cetakQR_all.jrxml";
+            String path="../src/report/cetakQR_all.jrxml";
             JasperDesign jd2=JRXmlLoader.load(path);
             HashMap parameter = new HashMap<>();
             JRDesignQuery newQuery2 = new JRDesignQuery();

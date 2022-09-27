@@ -618,6 +618,8 @@ protected void tab_transaksi(){
         menu_report = new javax.swing.JLabel();
         menu_4 = new javax.swing.JPanel();
         menu_trans1 = new javax.swing.JLabel();
+        menu_6 = new javax.swing.JPanel();
+        menu_report1 = new javax.swing.JLabel();
         p_utama = new javax.swing.JPanel();
         p_home = new javax.swing.JPanel();
         p_perusahaan_header9 = new javax.swing.JPanel();
@@ -808,10 +810,10 @@ protected void tab_transaksi(){
         jPanel49 = new javax.swing.JPanel();
         tipe_b_cari4 = new javax.swing.JLabel();
         cb_department = new javax.swing.JComboBox<>();
-        jPanel54 = new javax.swing.JPanel();
-        tipe_b_cari9 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("INVMS - HOME");
+        setIconImage(new javax.swing.ImageIcon(getClass().getResource("/img/icons8_logo.png")).getImage());
         setResizable(false);
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -856,6 +858,7 @@ protected void tab_transaksi(){
         menu_data.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8_data_recovery_40px.png"))); // NOI18N
         menu_data.setText("   MANAGEMENT");
         menu_data.setToolTipText("");
+        menu_data.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         menu_data.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 menu_dataMouseClicked(evt);
@@ -867,6 +870,7 @@ protected void tab_transaksi(){
         jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(231, 238, 126));
         jLabel5.setText("Perusahaan");
+        jLabel5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabel5.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel5MouseClicked(evt);
@@ -876,6 +880,7 @@ protected void tab_transaksi(){
         jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(231, 238, 126));
         jLabel6.setText("Departement");
+        jLabel6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabel6.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel6MouseClicked(evt);
@@ -885,6 +890,7 @@ protected void tab_transaksi(){
         jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(231, 238, 126));
         jLabel7.setText("Lokasi");
+        jLabel7.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabel7.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel7MouseClicked(evt);
@@ -894,6 +900,7 @@ protected void tab_transaksi(){
         jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(231, 238, 126));
         jLabel8.setText("Vendor");
+        jLabel8.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabel8.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel8MouseClicked(evt);
@@ -908,6 +915,7 @@ protected void tab_transaksi(){
         jLabel10.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(231, 238, 126));
         jLabel10.setText("User");
+        jLabel10.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabel10.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel10MouseClicked(evt);
@@ -977,6 +985,7 @@ protected void tab_transaksi(){
         menu_items.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8_new_product_40px.png"))); // NOI18N
         menu_items.setText("       I T E M S");
         menu_items.setToolTipText("");
+        menu_items.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         menu_items.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 menu_itemsMouseClicked(evt);
@@ -988,6 +997,7 @@ protected void tab_transaksi(){
         jLabel21.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel21.setForeground(new java.awt.Color(231, 238, 126));
         jLabel21.setText("Kategori");
+        jLabel21.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabel21.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel21MouseClicked(evt);
@@ -997,6 +1007,7 @@ protected void tab_transaksi(){
         jLabel22.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel22.setForeground(new java.awt.Color(231, 238, 126));
         jLabel22.setText("Merks/ Brands");
+        jLabel22.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabel22.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel22MouseClicked(evt);
@@ -1006,6 +1017,7 @@ protected void tab_transaksi(){
         jLabel23.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel23.setForeground(new java.awt.Color(231, 238, 126));
         jLabel23.setText("Tipe");
+        jLabel23.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabel23.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel23MouseClicked(evt);
@@ -1066,6 +1078,7 @@ protected void tab_transaksi(){
         menu_report.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8_edit_graph_report_40px.png"))); // NOI18N
         menu_report.setText("    R E P O R T S");
         menu_report.setToolTipText("");
+        menu_report.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         menu_report.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 menu_reportMouseClicked(evt);
@@ -1077,9 +1090,9 @@ protected void tab_transaksi(){
         menu_5Layout.setHorizontalGroup(
             menu_5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(menu_5Layout.createSequentialGroup()
-                .addGap(38, 38, 38)
+                .addGap(31, 31, 31)
                 .addComponent(menu_report)
-                .addContainerGap(38, Short.MAX_VALUE))
+                .addContainerGap(35, Short.MAX_VALUE))
         );
         menu_5Layout.setVerticalGroup(
             menu_5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1094,6 +1107,7 @@ protected void tab_transaksi(){
         menu_trans1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8_transaction_list_40px.png"))); // NOI18N
         menu_trans1.setText("   TRANSACTION");
         menu_trans1.setToolTipText("");
+        menu_trans1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         menu_trans1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 menu_trans1MouseClicked(evt);
@@ -1117,17 +1131,51 @@ protected void tab_transaksi(){
                 .addGap(39, 39, 39))
         );
 
+        menu_6.setBackground(new java.awt.Color(32, 74, 86));
+
+        menu_report1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        menu_report1.setForeground(new java.awt.Color(231, 238, 126));
+        menu_report1.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        menu_report1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8_qr_code_40px_1.png"))); // NOI18N
+        menu_report1.setText("    P R I N T  Q R");
+        menu_report1.setToolTipText("");
+        menu_report1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        menu_report1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                menu_report1MouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout menu_6Layout = new javax.swing.GroupLayout(menu_6);
+        menu_6.setLayout(menu_6Layout);
+        menu_6Layout.setHorizontalGroup(
+            menu_6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(menu_6Layout.createSequentialGroup()
+                .addGap(38, 38, 38)
+                .addComponent(menu_report1)
+                .addContainerGap(28, Short.MAX_VALUE))
+        );
+        menu_6Layout.setVerticalGroup(
+            menu_6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(menu_report1, javax.swing.GroupLayout.DEFAULT_SIZE, 47, Short.MAX_VALUE)
+        );
+
         javax.swing.GroupLayout p_sidebarLayout = new javax.swing.GroupLayout(p_sidebar);
         p_sidebar.setLayout(p_sidebarLayout);
         p_sidebarLayout.setHorizontalGroup(
             p_sidebarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(menu_1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(menu_3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, p_sidebarLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(menu_5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addComponent(menu_4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(menu_2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(p_sidebarLayout.createSequentialGroup()
+                .addGroup(p_sidebarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(menu_4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(menu_1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(menu_3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(menu_2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, p_sidebarLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(p_sidebarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(menu_5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(menu_6, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap())
         );
         p_sidebarLayout.setVerticalGroup(
             p_sidebarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1142,10 +1190,12 @@ protected void tab_transaksi(){
                 .addComponent(menu_4, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(menu_5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(menu_6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanel1.add(p_sidebar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 740));
+        jPanel1.add(p_sidebar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 250, 740));
 
         p_utama.setLayout(new java.awt.CardLayout());
 
@@ -3806,45 +3856,13 @@ protected void tab_transaksi(){
                         .addGap(33, 33, 33))))
         );
 
-        jPanel54.setBackground(new java.awt.Color(5, 32, 56));
-
-        tipe_b_cari9.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        tipe_b_cari9.setForeground(new java.awt.Color(231, 238, 126));
-        tipe_b_cari9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8_search_24px.png"))); // NOI18N
-        tipe_b_cari9.setText("C E T A K QR");
-        tipe_b_cari9.setIconTextGap(8);
-        tipe_b_cari9.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                tipe_b_cari9MouseClicked(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jPanel54Layout = new javax.swing.GroupLayout(jPanel54);
-        jPanel54.setLayout(jPanel54Layout);
-        jPanel54Layout.setHorizontalGroup(
-            jPanel54Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel54Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(tipe_b_cari9, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanel54Layout.setVerticalGroup(
-            jPanel54Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(tipe_b_cari9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(170, 170, 170)
-                        .addComponent(jPanel54, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap()
+                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(236, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
@@ -3852,9 +3870,7 @@ protected void tab_transaksi(){
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(34, 34, 34)
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(51, 51, 51)
-                .addComponent(jPanel54, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(217, 217, 217))
+                .addContainerGap(292, Short.MAX_VALUE))
         );
 
         jScrollPane1.setViewportView(jPanel2);
@@ -3864,16 +3880,15 @@ protected void tab_transaksi(){
         p_perusahaan_main8Layout.setHorizontalGroup(
             p_perusahaan_main8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, p_perusahaan_main8Layout.createSequentialGroup()
-                .addContainerGap(45, Short.MAX_VALUE)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1065, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                 .addContainerGap())
         );
         p_perusahaan_main8Layout.setVerticalGroup(
             p_perusahaan_main8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(p_perusahaan_main8Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 510, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(52, Short.MAX_VALUE))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 521, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 22, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout p_reportsLayout = new javax.swing.GroupLayout(p_reports);
@@ -3881,7 +3896,7 @@ protected void tab_transaksi(){
         p_reportsLayout.setHorizontalGroup(
             p_reportsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(p_perusahaan_header8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(p_perusahaan_main8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(p_perusahaan_main8, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         p_reportsLayout.setVerticalGroup(
             p_reportsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -4618,11 +4633,11 @@ protected void tab_transaksi(){
         // TODO add your handling code here:
     }//GEN-LAST:event_p_perusahaan_mainMouseExited
 
-    private void tipe_b_cari9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tipe_b_cari9MouseClicked
+    private void menu_report1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_menu_report1MouseClicked
         // TODO add your handling code here:
         cetak_qr pp = new cetak_qr();
         pp.setVisible(true);
-    }//GEN-LAST:event_tipe_b_cari9MouseClicked
+    }//GEN-LAST:event_menu_report1MouseClicked
 
     /**
      * @param args the command line arguments
@@ -4730,7 +4745,6 @@ protected void tab_transaksi(){
     private javax.swing.JPanel jPanel51;
     private javax.swing.JPanel jPanel52;
     private javax.swing.JPanel jPanel53;
-    private javax.swing.JPanel jPanel54;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JScrollPane jScrollPane1;
@@ -4756,12 +4770,14 @@ protected void tab_transaksi(){
     private javax.swing.JPanel menu_3;
     private javax.swing.JPanel menu_4;
     private javax.swing.JPanel menu_5;
+    private javax.swing.JPanel menu_6;
     private javax.swing.JLabel menu_data;
     private javax.swing.JPanel menu_data_list;
     private javax.swing.JLabel menu_home;
     private javax.swing.JLabel menu_items;
     private javax.swing.JPanel menu_items_list;
     private javax.swing.JLabel menu_report;
+    private javax.swing.JLabel menu_report1;
     private javax.swing.JLabel menu_trans1;
     private javax.swing.JPanel p_brands;
     private javax.swing.JPanel p_department;
@@ -4818,7 +4834,6 @@ protected void tab_transaksi(){
     private javax.swing.JLabel tipe_b_cari6;
     private javax.swing.JLabel tipe_b_cari7;
     private javax.swing.JLabel tipe_b_cari8;
-    private javax.swing.JLabel tipe_b_cari9;
     private javax.swing.JLabel tipe_b_edit;
     private javax.swing.JLabel tipe_b_hapus;
     private javax.swing.JLabel tipe_b_tambah;
