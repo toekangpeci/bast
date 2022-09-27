@@ -32,7 +32,7 @@ import classes.sql;
  */ 
 public class cetak_qr extends javax.swing.JFrame {
 private Connection conn = new koneksi().connect();
-public String a,b,c,d,e,f,kode,kode_barang,para,query;
+public String a,b,c,d,e,f,x,kode,kode_barang,para,query;
 HashMap<String,String> param = new HashMap<>();
     String kat,mer,tip,per,lok,dep;
     int count=0;
@@ -99,14 +99,15 @@ HashMap<String,String> param = new HashMap<>();
    
    public void cetak_qr_para_code(){
          para=txt_kode.getText();
-         siqil = siqil+" where trans_barang.kode in ("+para+");";
+        
+         x = siqil+" where trans_barang.kode in ("+para+");";
 
         try{             
             String path="./src/report/cetakQR_all.jrxml";
             JasperDesign jd2=JRXmlLoader.load(path);
             HashMap parameter = new HashMap<>();
             JRDesignQuery newQuery2 = new JRDesignQuery();
-            newQuery2.setText(siqil); 
+            newQuery2.setText(x); 
             jd2.setQuery(newQuery2);
         
             JasperReport jr2=JasperCompileManager.compileReport(jd2);
@@ -139,6 +140,7 @@ HashMap<String,String> param = new HashMap<>();
         catch (Exception ex){
                 JOptionPane.showMessageDialog(null,"DOKUMEN TIDAK ADA : "+ex);
         }
+      
    }
    
 
@@ -268,7 +270,7 @@ HashMap<String,String> param = new HashMap<>();
             else {
             ResultSet rs = st.executeQuery(asql); 
             while (rs.next()){a=(rs.getString(1));}
-            if (count==0){query=siqil+"where trans_barang.kode_kategori='"+a+"'"; count=count+1;} else {query=siqil+" trans_barang.kode_kategori='"+a+"'";}
+            if (count==0){query=query+"where trans_barang.kode_kategori='"+a+"'"; count=count+1;} else {query=siqil+" trans_barang.kode_kategori='"+a+"'";}
             }}
             catch (SQLException er){
             JOptionPane.showMessageDialog(null,"data gagal diraih : "+ er);
@@ -284,7 +286,7 @@ HashMap<String,String> param = new HashMap<>();
             else {
             ResultSet brs = st.executeQuery(bsql); 
             while (brs.next()){b=(brs.getString(1));}
-            if (count==0){query=siqil+"where trans_barang.kode_merk='"+b+"'"; count=count+1;} else {query=query+" and trans_barang.kode_merk='"+b+"'";}
+            if (count==0){query=query+"where trans_barang.kode_merk='"+b+"'"; count=count+1;} else {query=query+" and trans_barang.kode_merk='"+b+"'";}
             }}
             catch (SQLException er){
             JOptionPane.showMessageDialog(null,"data gagal diraih : "+ er);
@@ -300,7 +302,7 @@ HashMap<String,String> param = new HashMap<>();
             else {
             ResultSet crs = st.executeQuery(csql); 
             while (crs.next()){c=(crs.getString(1));}
-            if (count==0){query=siqil+"where trans_barang.kode_barang='"+c+"'"; count=count+1;} else {query=query+" and trans_barang.kode_barang='"+c+"'";}
+            if (count==0){query=query+"where trans_barang.kode_barang='"+c+"'"; count=count+1;} else {query=query+" and trans_barang.kode_barang='"+c+"'";}
             }}
     
             catch (SQLException er){
@@ -317,7 +319,7 @@ HashMap<String,String> param = new HashMap<>();
             else {
             ResultSet drs = st.executeQuery(dsql); 
             while (drs.next()){d=(drs.getString(1));}
-            if (count==0){query=siqil+"where trans_barang.kode_perusahaan='"+d+"'"; count=count+1;} else {query=query+" and trans_barang.kode_perusahaan='"+d+"'";}
+            if (count==0){query=query+"where trans_barang.kode_perusahaan='"+d+"'"; count=count+1;} else {query=query+" and trans_barang.kode_perusahaan='"+d+"'";}
             }}
         catch (SQLException er){
             JOptionPane.showMessageDialog(null,"data gagal diraih : "+ er);
@@ -333,7 +335,7 @@ HashMap<String,String> param = new HashMap<>();
             else {
             ResultSet ers = st.executeQuery(esql); 
             while (ers.next()){e=(ers.getString(1));}
-            if (count==0){query=siqil+"where trans_barang.kode_lokasi='"+e+"'"; count=count+1;} else {query=query+" and trans_barang.kode_lokasi='"+e+"'";}
+            if (count==0){query=query+"where trans_barang.kode_lokasi='"+e+"'"; count=count+1;} else {query=query+" and trans_barang.kode_lokasi='"+e+"'";}
             }}
               catch (SQLException er){
             JOptionPane.showMessageDialog(null,"data gagal diraih : "+ er);
@@ -349,7 +351,7 @@ HashMap<String,String> param = new HashMap<>();
             else {
             ResultSet frs = st.executeQuery(fsql); 
             while (frs.next()){f=(frs.getString(1));}
-            if (count==0){query=siqil+"where trans_barang.kode_dept='"+f+"'"; count=count+1;} else {query=query+" and trans_barang.kode_dept='"+f+"'";}
+            if (count==0){query=query+"where trans_barang.kode_dept='"+f+"'"; count=count+1;} else {query=query+" and trans_barang.kode_dept='"+f+"'";}
             }
         }
         catch (SQLException er){
@@ -706,8 +708,8 @@ HashMap<String,String> param = new HashMap<>();
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
                 .addComponent(txt_kategori2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(40, 40, 40)
-                .addComponent(cb_perusahaan, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(127, 127, 127))
+                .addComponent(cb_perusahaan, javax.swing.GroupLayout.PREFERRED_SIZE, 344, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -750,8 +752,8 @@ HashMap<String,String> param = new HashMap<>();
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel8Layout.createSequentialGroup()
                 .addComponent(txt_kategori3, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(cb_dept, javax.swing.GroupLayout.PREFERRED_SIZE, 242, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addComponent(cb_dept, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         jPanel8Layout.setVerticalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -789,8 +791,8 @@ HashMap<String,String> param = new HashMap<>();
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel10Layout.createSequentialGroup()
                 .addComponent(txt_kategori4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(80, 80, 80)
-                .addComponent(cb_lokasi, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(110, 110, 110))
+                .addComponent(cb_lokasi, javax.swing.GroupLayout.PREFERRED_SIZE, 339, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
         jPanel10Layout.setVerticalGroup(
             jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -828,8 +830,8 @@ HashMap<String,String> param = new HashMap<>();
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel11Layout.createSequentialGroup()
                 .addComponent(txt_kategori5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(66, 66, 66)
-                .addComponent(cb_kategori, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(122, 122, 122))
+                .addComponent(cb_kategori, javax.swing.GroupLayout.PREFERRED_SIZE, 336, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
         jPanel11Layout.setVerticalGroup(
             jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -872,8 +874,8 @@ HashMap<String,String> param = new HashMap<>();
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel12Layout.createSequentialGroup()
                 .addComponent(txt_kategori6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(79, 79, 79)
-                .addComponent(cb_merk, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(104, 104, 104))
+                .addComponent(cb_merk, javax.swing.GroupLayout.PREFERRED_SIZE, 339, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
         jPanel12Layout.setVerticalGroup(
             jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -916,8 +918,8 @@ HashMap<String,String> param = new HashMap<>();
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel13Layout.createSequentialGroup()
                 .addComponent(txt_kategori7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(41, 41, 41)
-                .addComponent(cb_tipe, javax.swing.GroupLayout.PREFERRED_SIZE, 242, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(143, 143, 143))
+                .addComponent(cb_tipe, javax.swing.GroupLayout.PREFERRED_SIZE, 339, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
         jPanel13Layout.setVerticalGroup(
             jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -941,12 +943,12 @@ HashMap<String,String> param = new HashMap<>();
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addComponent(jPanel12, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel11, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                     .addComponent(jPanel10, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel8, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                    .addComponent(jPanel5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel13, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                    .addComponent(jPanel11, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel13, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -1072,8 +1074,7 @@ HashMap<String,String> param = new HashMap<>();
 
     private void jLabel22MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel22MouseClicked
         // TODO add your handling code here
-      
-           // query=siqil;
+        query=siqil;
         para_1();
         para_2();
         para_3();
@@ -1125,6 +1126,7 @@ HashMap<String,String> param = new HashMap<>();
 ////        query= txt_kode.getText().replaceAll(","," OR trans_barang.kode = ");
 
         cetak_qr_para_code();
+        x="";
 //        }
     }//GEN-LAST:event_jLabel32MouseClicked
 

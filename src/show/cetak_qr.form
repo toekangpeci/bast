@@ -55,12 +55,12 @@
               <Group type="102" attributes="0">
                   <Group type="103" groupAlignment="1" max="-2" attributes="0">
                       <Component id="jPanel12" alignment="0" max="32767" attributes="0"/>
-                      <Component id="jPanel11" alignment="0" pref="0" max="32767" attributes="0"/>
                       <Component id="jPanel10" alignment="0" max="32767" attributes="0"/>
                       <Component id="jPanel8" alignment="0" max="32767" attributes="0"/>
-                      <Component id="jPanel5" alignment="0" pref="0" max="32767" attributes="0"/>
+                      <Component id="jPanel5" alignment="0" max="32767" attributes="0"/>
                       <Component id="jPanel3" alignment="0" max="32767" attributes="0"/>
-                      <Component id="jPanel13" pref="0" max="32767" attributes="0"/>
+                      <Component id="jPanel11" alignment="0" max="32767" attributes="0"/>
+                      <Component id="jPanel13" alignment="0" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
               </Group>
@@ -488,8 +488,8 @@
                   <Group type="102" alignment="1" attributes="0">
                       <Component id="txt_kategori2" max="32767" attributes="0"/>
                       <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
-                      <Component id="cb_perusahaan" min="-2" pref="244" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="127" max="-2" attributes="0"/>
+                      <Component id="cb_perusahaan" min="-2" pref="344" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -552,8 +552,8 @@
                   <Group type="102" alignment="1" attributes="0">
                       <Component id="txt_kategori3" min="-2" pref="179" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="cb_dept" min="-2" pref="242" max="-2" attributes="0"/>
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      <Component id="cb_dept" max="32767" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -617,8 +617,8 @@
                   <Group type="102" alignment="1" attributes="0">
                       <Component id="txt_kategori4" max="32767" attributes="0"/>
                       <EmptySpace min="-2" pref="80" max="-2" attributes="0"/>
-                      <Component id="cb_lokasi" min="-2" pref="239" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="110" max="-2" attributes="0"/>
+                      <Component id="cb_lokasi" min="-2" pref="339" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -681,8 +681,8 @@
                   <Group type="102" alignment="1" attributes="0">
                       <Component id="txt_kategori5" max="32767" attributes="0"/>
                       <EmptySpace min="-2" pref="66" max="-2" attributes="0"/>
-                      <Component id="cb_kategori" min="-2" pref="239" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="122" max="-2" attributes="0"/>
+                      <Component id="cb_kategori" min="-2" pref="336" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -745,8 +745,8 @@
                   <Group type="102" alignment="1" attributes="0">
                       <Component id="txt_kategori6" max="32767" attributes="0"/>
                       <EmptySpace min="-2" pref="79" max="-2" attributes="0"/>
-                      <Component id="cb_merk" min="-2" pref="245" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="104" max="-2" attributes="0"/>
+                      <Component id="cb_merk" min="-2" pref="339" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -810,8 +810,8 @@
                   <Group type="102" alignment="1" attributes="0">
                       <Component id="txt_kategori7" max="32767" attributes="0"/>
                       <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
-                      <Component id="cb_tipe" min="-2" pref="242" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="143" max="-2" attributes="0"/>
+                      <Component id="cb_tipe" min="-2" pref="339" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
