@@ -100,7 +100,7 @@ HashMap<String,String> param = new HashMap<>();
          else { x = siqil+" where trans_barang.kode in ("+para+");"; }
          
         try{             
-            String path="./src/report/cetakQR_all.jrxml";
+            String path="../src/report/cetakQR_all.jrxml";
             JasperDesign jd2=JRXmlLoader.load(path);
             HashMap parameter = new HashMap<>();
             JRDesignQuery newQuery2 = new JRDesignQuery();

@@ -195,6 +195,7 @@ public int b_manajemen,b_manajemen_perusahaan, b_manajemen_perusahaan_tambah, b_
         btn_Login.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btn_Login.setForeground(new java.awt.Color(231, 238, 126));
         btn_Login.setText("      SIGN IN");
+        btn_Login.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btn_Login.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btn_LoginMouseClicked(evt);
@@ -220,6 +221,7 @@ public int b_manajemen,b_manajemen_perusahaan, b_manajemen_perusahaan_tambah, b_
         btn_cancel.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btn_cancel.setForeground(new java.awt.Color(231, 238, 126));
         btn_cancel.setText("       CANCEL");
+        btn_cancel.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btn_cancel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btn_cancelMouseClicked(evt);
@@ -244,6 +246,7 @@ public int b_manajemen,b_manajemen_perusahaan, b_manajemen_perusahaan_tambah, b_
         btn_Login2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btn_Login2.setForeground(new java.awt.Color(231, 238, 126));
         btn_Login2.setText("X");
+        btn_Login2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btn_Login2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btn_Login2MouseClicked(evt);

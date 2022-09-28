@@ -1076,6 +1076,9 @@
                               <Image iconType="3" name="/img/icons8_add_24px.png"/>
                             </Property>
                             <Property name="text" type="java.lang.String" value="TAMBAH"/>
+                            <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                              <Color id="Hand Cursor"/>
+                            </Property>
                             <Property name="iconTextGap" type="int" value="8"/>
                           </Properties>
                           <Events>
@@ -1119,6 +1122,9 @@
                               <Image iconType="3" name="/img/icons8_trash_can_24px.png"/>
                             </Property>
                             <Property name="text" type="java.lang.String" value="   HAPUS"/>
+                            <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                              <Color id="Hand Cursor"/>
+                            </Property>
                             <Property name="iconTextGap" type="int" value="8"/>
                           </Properties>
                           <Events>
@@ -1163,6 +1169,9 @@
                               <Image iconType="3" name="/img/icons8_search_24px.png"/>
                             </Property>
                             <Property name="text" type="java.lang.String" value="CARI/REFRESH"/>
+                            <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                              <Color id="Hand Cursor"/>
+                            </Property>
                             <Property name="iconTextGap" type="int" value="8"/>
                           </Properties>
                           <Events>
@@ -1206,6 +1215,9 @@
                               <Image iconType="3" name="/img/icons8_edit_24px_1.png"/>
                             </Property>
                             <Property name="text" type="java.lang.String" value="     EDIT"/>
+                            <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                              <Color id="Hand Cursor"/>
+                            </Property>
                             <Property name="iconTextGap" type="int" value="8"/>
                           </Properties>
                           <Events>
@@ -1486,6 +1498,9 @@
                               <Image iconType="3" name="/img/icons8_add_24px.png"/>
                             </Property>
                             <Property name="text" type="java.lang.String" value="TAMBAH"/>
+                            <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                              <Color id="Hand Cursor"/>
+                            </Property>
                             <Property name="iconTextGap" type="int" value="8"/>
                           </Properties>
                           <Events>
@@ -1529,6 +1544,9 @@
                               <Image iconType="3" name="/img/icons8_trash_can_24px.png"/>
                             </Property>
                             <Property name="text" type="java.lang.String" value="   HAPUS"/>
+                            <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                              <Color id="Hand Cursor"/>
+                            </Property>
                             <Property name="iconTextGap" type="int" value="8"/>
                           </Properties>
                           <Events>
@@ -1573,6 +1591,9 @@
                               <Image iconType="3" name="/img/icons8_search_24px.png"/>
                             </Property>
                             <Property name="text" type="java.lang.String" value="CARI/REFRESH"/>
+                            <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                              <Color id="Hand Cursor"/>
+                            </Property>
                             <Property name="iconTextGap" type="int" value="8"/>
                           </Properties>
                           <Events>
@@ -1616,6 +1637,9 @@
                               <Image iconType="3" name="/img/icons8_edit_24px_1.png"/>
                             </Property>
                             <Property name="text" type="java.lang.String" value="     EDIT"/>
+                            <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                              <Color id="Hand Cursor"/>
+                            </Property>
                             <Property name="iconTextGap" type="int" value="8"/>
                           </Properties>
                           <Events>
@@ -1887,6 +1911,9 @@
                               <Image iconType="3" name="/img/icons8_add_24px.png"/>
                             </Property>
                             <Property name="text" type="java.lang.String" value="TAMBAH"/>
+                            <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                              <Color id="Hand Cursor"/>
+                            </Property>
                             <Property name="iconTextGap" type="int" value="8"/>
                           </Properties>
                           <Events>
@@ -1930,6 +1957,9 @@
                               <Image iconType="3" name="/img/icons8_trash_can_24px.png"/>
                             </Property>
                             <Property name="text" type="java.lang.String" value="   HAPUS"/>
+                            <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                              <Color id="Hand Cursor"/>
+                            </Property>
                             <Property name="iconTextGap" type="int" value="8"/>
                           </Properties>
                           <Events>
@@ -1974,6 +2004,9 @@
                               <Image iconType="3" name="/img/icons8_search_24px.png"/>
                             </Property>
                             <Property name="text" type="java.lang.String" value="CARI/REFRESH"/>
+                            <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                              <Color id="Hand Cursor"/>
+                            </Property>
                             <Property name="iconTextGap" type="int" value="8"/>
                           </Properties>
                           <Events>
@@ -2017,6 +2050,9 @@
                               <Image iconType="3" name="/img/icons8_edit_24px_1.png"/>
                             </Property>
                             <Property name="text" type="java.lang.String" value="     EDIT"/>
+                            <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                              <Color id="Hand Cursor"/>
+                            </Property>
                             <Property name="iconTextGap" type="int" value="8"/>
                           </Properties>
                           <Events>
@@ -2291,6 +2327,9 @@
                               <Image iconType="3" name="/img/icons8_add_24px.png"/>
                             </Property>
                             <Property name="text" type="java.lang.String" value="TAMBAH"/>
+                            <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                              <Color id="Hand Cursor"/>
+                            </Property>
                             <Property name="iconTextGap" type="int" value="8"/>
                           </Properties>
                           <Events>
@@ -2334,6 +2373,9 @@
                               <Image iconType="3" name="/img/icons8_trash_can_24px.png"/>
                             </Property>
                             <Property name="text" type="java.lang.String" value="   HAPUS"/>
+                            <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                              <Color id="Hand Cursor"/>
+                            </Property>
                             <Property name="iconTextGap" type="int" value="8"/>
                           </Properties>
                           <Events>
@@ -2378,6 +2420,9 @@
                               <Image iconType="3" name="/img/icons8_search_24px.png"/>
                             </Property>
                             <Property name="text" type="java.lang.String" value="CARI/REFRESH"/>
+                            <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                              <Color id="Hand Cursor"/>
+                            </Property>
                             <Property name="iconTextGap" type="int" value="8"/>
                           </Properties>
                           <Events>
@@ -2421,6 +2466,9 @@
                               <Image iconType="3" name="/img/icons8_edit_24px_1.png"/>
                             </Property>
                             <Property name="text" type="java.lang.String" value="     EDIT"/>
+                            <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                              <Color id="Hand Cursor"/>
+                            </Property>
                             <Property name="iconTextGap" type="int" value="8"/>
                           </Properties>
                           <Events>
@@ -2437,6 +2485,9 @@
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="e6" green="ff" red="fe" type="rgb"/>
+                </Property>
+                <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                  <Color id="Default Cursor"/>
                 </Property>
               </Properties>
               <Constraints>
@@ -2695,6 +2746,9 @@
                               <Image iconType="3" name="/img/icons8_add_24px.png"/>
                             </Property>
                             <Property name="text" type="java.lang.String" value="TAMBAH"/>
+                            <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                              <Color id="Hand Cursor"/>
+                            </Property>
                             <Property name="iconTextGap" type="int" value="8"/>
                           </Properties>
                           <Events>
@@ -2738,6 +2792,9 @@
                               <Image iconType="3" name="/img/icons8_trash_can_24px.png"/>
                             </Property>
                             <Property name="text" type="java.lang.String" value="   HAPUS"/>
+                            <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                              <Color id="Hand Cursor"/>
+                            </Property>
                             <Property name="iconTextGap" type="int" value="8"/>
                           </Properties>
                           <Events>
@@ -2782,6 +2839,9 @@
                               <Image iconType="3" name="/img/icons8_search_24px.png"/>
                             </Property>
                             <Property name="text" type="java.lang.String" value="CARI/REFRESH"/>
+                            <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                              <Color id="Hand Cursor"/>
+                            </Property>
                             <Property name="iconTextGap" type="int" value="8"/>
                           </Properties>
                           <Events>
@@ -2825,6 +2885,9 @@
                               <Image iconType="3" name="/img/icons8_edit_24px_1.png"/>
                             </Property>
                             <Property name="text" type="java.lang.String" value="     EDIT"/>
+                            <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                              <Color id="Hand Cursor"/>
+                            </Property>
                             <Property name="iconTextGap" type="int" value="8"/>
                           </Properties>
                           <Events>
@@ -2841,6 +2904,9 @@
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="e6" green="ff" red="fe" type="rgb"/>
+                </Property>
+                <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                  <Color id="Default Cursor"/>
                 </Property>
               </Properties>
               <Constraints>
@@ -3099,6 +3165,9 @@
                               <Image iconType="3" name="/img/icons8_add_24px.png"/>
                             </Property>
                             <Property name="text" type="java.lang.String" value="TAMBAH"/>
+                            <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                              <Color id="Hand Cursor"/>
+                            </Property>
                             <Property name="iconTextGap" type="int" value="8"/>
                           </Properties>
                           <Events>
@@ -3142,6 +3211,9 @@
                               <Image iconType="3" name="/img/icons8_trash_can_24px.png"/>
                             </Property>
                             <Property name="text" type="java.lang.String" value="   HAPUS"/>
+                            <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                              <Color id="Hand Cursor"/>
+                            </Property>
                             <Property name="iconTextGap" type="int" value="8"/>
                           </Properties>
                           <Events>
@@ -3186,6 +3258,9 @@
                               <Image iconType="3" name="/img/icons8_search_24px.png"/>
                             </Property>
                             <Property name="text" type="java.lang.String" value="CARI/REFRESH"/>
+                            <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                              <Color id="Hand Cursor"/>
+                            </Property>
                             <Property name="iconTextGap" type="int" value="8"/>
                           </Properties>
                           <Events>
@@ -3229,6 +3304,9 @@
                               <Image iconType="3" name="/img/icons8_edit_24px_1.png"/>
                             </Property>
                             <Property name="text" type="java.lang.String" value="     EDIT"/>
+                            <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                              <Color id="Hand Cursor"/>
+                            </Property>
                             <Property name="iconTextGap" type="int" value="8"/>
                           </Properties>
                           <Events>
@@ -3503,6 +3581,9 @@
                               <Image iconType="3" name="/img/icons8_add_24px.png"/>
                             </Property>
                             <Property name="text" type="java.lang.String" value="TAMBAH"/>
+                            <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                              <Color id="Hand Cursor"/>
+                            </Property>
                             <Property name="iconTextGap" type="int" value="8"/>
                           </Properties>
                           <Events>
@@ -3546,6 +3627,9 @@
                               <Image iconType="3" name="/img/icons8_trash_can_24px.png"/>
                             </Property>
                             <Property name="text" type="java.lang.String" value="   HAPUS"/>
+                            <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                              <Color id="Hand Cursor"/>
+                            </Property>
                             <Property name="iconTextGap" type="int" value="8"/>
                           </Properties>
                           <Events>
@@ -3590,6 +3674,9 @@
                               <Image iconType="3" name="/img/icons8_search_24px.png"/>
                             </Property>
                             <Property name="text" type="java.lang.String" value="CARI/REFRESH"/>
+                            <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                              <Color id="Hand Cursor"/>
+                            </Property>
                             <Property name="iconTextGap" type="int" value="8"/>
                           </Properties>
                           <Events>
@@ -3633,6 +3720,9 @@
                               <Image iconType="3" name="/img/icons8_edit_24px_1.png"/>
                             </Property>
                             <Property name="text" type="java.lang.String" value="     EDIT"/>
+                            <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                              <Color id="Hand Cursor"/>
+                            </Property>
                             <Property name="iconTextGap" type="int" value="8"/>
                           </Properties>
                           <Events>
@@ -3907,6 +3997,9 @@
                               <Image iconType="3" name="/img/icons8_add_24px.png"/>
                             </Property>
                             <Property name="text" type="java.lang.String" value="TAMBAH"/>
+                            <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                              <Color id="Hand Cursor"/>
+                            </Property>
                             <Property name="iconTextGap" type="int" value="8"/>
                           </Properties>
                           <Events>
@@ -3950,6 +4043,9 @@
                               <Image iconType="3" name="/img/icons8_trash_can_24px.png"/>
                             </Property>
                             <Property name="text" type="java.lang.String" value="   HAPUS"/>
+                            <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                              <Color id="Hand Cursor"/>
+                            </Property>
                             <Property name="iconTextGap" type="int" value="8"/>
                           </Properties>
                           <Events>
@@ -3994,6 +4090,9 @@
                               <Image iconType="3" name="/img/icons8_search_24px.png"/>
                             </Property>
                             <Property name="text" type="java.lang.String" value="CARI/REFRESH"/>
+                            <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                              <Color id="Hand Cursor"/>
+                            </Property>
                             <Property name="iconTextGap" type="int" value="8"/>
                           </Properties>
                           <Events>
@@ -4037,6 +4136,9 @@
                               <Image iconType="3" name="/img/icons8_edit_24px_1.png"/>
                             </Property>
                             <Property name="text" type="java.lang.String" value="     EDIT"/>
+                            <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                              <Color id="Hand Cursor"/>
+                            </Property>
                             <Property name="iconTextGap" type="int" value="8"/>
                           </Properties>
                           <Events>
@@ -4053,6 +4155,9 @@
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="e6" green="ff" red="fe" type="rgb"/>
+                </Property>
+                <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                  <Color id="Default Cursor"/>
                 </Property>
               </Properties>
               <Constraints>
@@ -4313,6 +4418,9 @@
                               <Image iconType="3" name="/img/icons8_add_24px.png"/>
                             </Property>
                             <Property name="text" type="java.lang.String" value="TAMBAH"/>
+                            <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                              <Color id="Hand Cursor"/>
+                            </Property>
                             <Property name="iconTextGap" type="int" value="8"/>
                           </Properties>
                           <Events>
@@ -4357,6 +4465,9 @@
                               <Image iconType="3" name="/img/icons8_search_24px.png"/>
                             </Property>
                             <Property name="text" type="java.lang.String" value="CARI/REFRESH"/>
+                            <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                              <Color id="Hand Cursor"/>
+                            </Property>
                             <Property name="iconTextGap" type="int" value="8"/>
                           </Properties>
                           <Events>
@@ -4400,6 +4511,9 @@
                               <Image iconType="3" name="/img/icons8_edit_24px_1.png"/>
                             </Property>
                             <Property name="text" type="java.lang.String" value="     EDIT"/>
+                            <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                              <Color id="Hand Cursor"/>
+                            </Property>
                             <Property name="iconTextGap" type="int" value="8"/>
                           </Properties>
                           <Events>
@@ -4443,6 +4557,9 @@
                               <Image iconType="3" name="/img/icons8_Medical_History_24px.png"/>
                             </Property>
                             <Property name="text" type="java.lang.String" value=" HISTORY"/>
+                            <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                              <Color id="Hand Cursor"/>
+                            </Property>
                             <Property name="iconTextGap" type="int" value="8"/>
                           </Properties>
                           <Events>
@@ -4791,6 +4908,9 @@
                                           <Image iconType="3" name="/img/icons8_search_24px.png"/>
                                         </Property>
                                         <Property name="text" type="java.lang.String" value="C E T A K"/>
+                                        <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                                          <Color id="Hand Cursor"/>
+                                        </Property>
                                         <Property name="iconTextGap" type="int" value="8"/>
                                       </Properties>
                                       <Events>
@@ -4867,6 +4987,9 @@
                                           <Image iconType="3" name="/img/icons8_search_24px.png"/>
                                         </Property>
                                         <Property name="text" type="java.lang.String" value="C E T A K"/>
+                                        <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                                          <Color id="Hand Cursor"/>
+                                        </Property>
                                         <Property name="iconTextGap" type="int" value="8"/>
                                       </Properties>
                                       <Events>
@@ -4943,6 +5066,9 @@
                                           <Image iconType="3" name="/img/icons8_search_24px.png"/>
                                         </Property>
                                         <Property name="text" type="java.lang.String" value="C E T A K"/>
+                                        <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                                          <Color id="Hand Cursor"/>
+                                        </Property>
                                         <Property name="iconTextGap" type="int" value="8"/>
                                       </Properties>
                                       <Events>
@@ -5019,6 +5145,9 @@
                                           <Image iconType="3" name="/img/icons8_search_24px.png"/>
                                         </Property>
                                         <Property name="text" type="java.lang.String" value="C E T A K"/>
+                                        <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                                          <Color id="Hand Cursor"/>
+                                        </Property>
                                         <Property name="iconTextGap" type="int" value="8"/>
                                       </Properties>
                                       <Events>
@@ -5095,6 +5224,9 @@
                                           <Image iconType="3" name="/img/icons8_search_24px.png"/>
                                         </Property>
                                         <Property name="text" type="java.lang.String" value="C E T A K"/>
+                                        <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                                          <Color id="Hand Cursor"/>
+                                        </Property>
                                         <Property name="iconTextGap" type="int" value="8"/>
                                       </Properties>
                                       <Events>
@@ -5171,6 +5303,9 @@
                                           <Image iconType="3" name="/img/icons8_search_24px.png"/>
                                         </Property>
                                         <Property name="text" type="java.lang.String" value="C E T A K"/>
+                                        <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                                          <Color id="Hand Cursor"/>
+                                        </Property>
                                         <Property name="iconTextGap" type="int" value="8"/>
                                       </Properties>
                                       <Events>
@@ -5268,6 +5403,9 @@
                                           <Image iconType="3" name="/img/icons8_search_24px.png"/>
                                         </Property>
                                         <Property name="text" type="java.lang.String" value="C E T A K"/>
+                                        <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                                          <Color id="Hand Cursor"/>
+                                        </Property>
                                         <Property name="iconTextGap" type="int" value="8"/>
                                       </Properties>
                                       <Events>

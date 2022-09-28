@@ -1389,6 +1389,7 @@ protected void tab_transaksi(){
         vendor_b_tambah.setForeground(new java.awt.Color(231, 238, 126));
         vendor_b_tambah.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8_add_24px.png"))); // NOI18N
         vendor_b_tambah.setText("TAMBAH");
+        vendor_b_tambah.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         vendor_b_tambah.setIconTextGap(8);
         vendor_b_tambah.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -1415,6 +1416,7 @@ protected void tab_transaksi(){
         vendor_b_hapus.setForeground(new java.awt.Color(231, 238, 126));
         vendor_b_hapus.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8_trash_can_24px.png"))); // NOI18N
         vendor_b_hapus.setText("   HAPUS");
+        vendor_b_hapus.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         vendor_b_hapus.setIconTextGap(8);
         vendor_b_hapus.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -1441,6 +1443,7 @@ protected void tab_transaksi(){
         vendor_b_cari.setForeground(new java.awt.Color(231, 238, 126));
         vendor_b_cari.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8_search_24px.png"))); // NOI18N
         vendor_b_cari.setText("CARI/REFRESH");
+        vendor_b_cari.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         vendor_b_cari.setIconTextGap(8);
         vendor_b_cari.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -1468,6 +1471,7 @@ protected void tab_transaksi(){
         vendor_b_edit.setForeground(new java.awt.Color(231, 238, 126));
         vendor_b_edit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8_edit_24px_1.png"))); // NOI18N
         vendor_b_edit.setText("     EDIT");
+        vendor_b_edit.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         vendor_b_edit.setIconTextGap(8);
         vendor_b_edit.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -1636,6 +1640,7 @@ protected void tab_transaksi(){
         perusahaan_b_tambah.setForeground(new java.awt.Color(231, 238, 126));
         perusahaan_b_tambah.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8_add_24px.png"))); // NOI18N
         perusahaan_b_tambah.setText("TAMBAH");
+        perusahaan_b_tambah.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         perusahaan_b_tambah.setIconTextGap(8);
         perusahaan_b_tambah.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -1662,6 +1667,7 @@ protected void tab_transaksi(){
         perusahaan_b_hapus.setForeground(new java.awt.Color(231, 238, 126));
         perusahaan_b_hapus.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8_trash_can_24px.png"))); // NOI18N
         perusahaan_b_hapus.setText("   HAPUS");
+        perusahaan_b_hapus.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         perusahaan_b_hapus.setIconTextGap(8);
         perusahaan_b_hapus.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -1688,6 +1694,7 @@ protected void tab_transaksi(){
         jLabel9.setForeground(new java.awt.Color(231, 238, 126));
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8_search_24px.png"))); // NOI18N
         jLabel9.setText("CARI/REFRESH");
+        jLabel9.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabel9.setIconTextGap(8);
         jLabel9.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -1715,6 +1722,7 @@ protected void tab_transaksi(){
         perusahaan_b_edit.setForeground(new java.awt.Color(231, 238, 126));
         perusahaan_b_edit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8_edit_24px_1.png"))); // NOI18N
         perusahaan_b_edit.setText("     EDIT");
+        perusahaan_b_edit.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         perusahaan_b_edit.setIconTextGap(8);
         perusahaan_b_edit.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -1873,6 +1881,7 @@ protected void tab_transaksi(){
         department_b_tambah.setForeground(new java.awt.Color(231, 238, 126));
         department_b_tambah.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8_add_24px.png"))); // NOI18N
         department_b_tambah.setText("TAMBAH");
+        department_b_tambah.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         department_b_tambah.setIconTextGap(8);
         department_b_tambah.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -1899,6 +1908,7 @@ protected void tab_transaksi(){
         department_b_hapus.setForeground(new java.awt.Color(231, 238, 126));
         department_b_hapus.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8_trash_can_24px.png"))); // NOI18N
         department_b_hapus.setText("   HAPUS");
+        department_b_hapus.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         department_b_hapus.setIconTextGap(8);
         department_b_hapus.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -1925,6 +1935,7 @@ protected void tab_transaksi(){
         jLabel12.setForeground(new java.awt.Color(231, 238, 126));
         jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8_search_24px.png"))); // NOI18N
         jLabel12.setText("CARI/REFRESH");
+        jLabel12.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabel12.setIconTextGap(8);
         jLabel12.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -1952,6 +1963,7 @@ protected void tab_transaksi(){
         Department_b_edit.setForeground(new java.awt.Color(231, 238, 126));
         Department_b_edit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8_edit_24px_1.png"))); // NOI18N
         Department_b_edit.setText("     EDIT");
+        Department_b_edit.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         Department_b_edit.setIconTextGap(8);
         Department_b_edit.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -2108,6 +2120,7 @@ protected void tab_transaksi(){
         lokasi_b_tambah.setForeground(new java.awt.Color(231, 238, 126));
         lokasi_b_tambah.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8_add_24px.png"))); // NOI18N
         lokasi_b_tambah.setText("TAMBAH");
+        lokasi_b_tambah.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         lokasi_b_tambah.setIconTextGap(8);
         lokasi_b_tambah.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -2134,6 +2147,7 @@ protected void tab_transaksi(){
         lokasi_b_hapus.setForeground(new java.awt.Color(231, 238, 126));
         lokasi_b_hapus.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8_trash_can_24px.png"))); // NOI18N
         lokasi_b_hapus.setText("   HAPUS");
+        lokasi_b_hapus.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         lokasi_b_hapus.setIconTextGap(8);
         lokasi_b_hapus.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -2160,6 +2174,7 @@ protected void tab_transaksi(){
         lokasi_b_cari.setForeground(new java.awt.Color(231, 238, 126));
         lokasi_b_cari.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8_search_24px.png"))); // NOI18N
         lokasi_b_cari.setText("CARI/REFRESH");
+        lokasi_b_cari.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         lokasi_b_cari.setIconTextGap(8);
         lokasi_b_cari.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -2187,6 +2202,7 @@ protected void tab_transaksi(){
         lokasi_b_edit.setForeground(new java.awt.Color(231, 238, 126));
         lokasi_b_edit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8_edit_24px_1.png"))); // NOI18N
         lokasi_b_edit.setText("     EDIT");
+        lokasi_b_edit.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         lokasi_b_edit.setIconTextGap(8);
         lokasi_b_edit.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -2263,6 +2279,7 @@ protected void tab_transaksi(){
         p_utama.add(p_lokasi, "p_lokasi");
 
         p_kategori.setBackground(new java.awt.Color(254, 255, 230));
+        p_kategori.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         p_kategori_header.setBackground(new java.awt.Color(5, 32, 56));
 
@@ -2345,6 +2362,7 @@ protected void tab_transaksi(){
         kategori_b_tambah.setForeground(new java.awt.Color(231, 238, 126));
         kategori_b_tambah.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8_add_24px.png"))); // NOI18N
         kategori_b_tambah.setText("TAMBAH");
+        kategori_b_tambah.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         kategori_b_tambah.setIconTextGap(8);
         kategori_b_tambah.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -2371,6 +2389,7 @@ protected void tab_transaksi(){
         kategori_b_hapus.setForeground(new java.awt.Color(231, 238, 126));
         kategori_b_hapus.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8_trash_can_24px.png"))); // NOI18N
         kategori_b_hapus.setText("   HAPUS");
+        kategori_b_hapus.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         kategori_b_hapus.setIconTextGap(8);
         kategori_b_hapus.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -2397,6 +2416,7 @@ protected void tab_transaksi(){
         kategori_b_cari.setForeground(new java.awt.Color(231, 238, 126));
         kategori_b_cari.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8_search_24px.png"))); // NOI18N
         kategori_b_cari.setText("CARI/REFRESH");
+        kategori_b_cari.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         kategori_b_cari.setIconTextGap(8);
         kategori_b_cari.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -2424,6 +2444,7 @@ protected void tab_transaksi(){
         kategori_b_edit.setForeground(new java.awt.Color(231, 238, 126));
         kategori_b_edit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8_edit_24px_1.png"))); // NOI18N
         kategori_b_edit.setText("     EDIT");
+        kategori_b_edit.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         kategori_b_edit.setIconTextGap(8);
         kategori_b_edit.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -2500,6 +2521,7 @@ protected void tab_transaksi(){
         p_utama.add(p_kategori, "p_kategori");
 
         p_brands.setBackground(new java.awt.Color(254, 255, 230));
+        p_brands.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         p_perusahaan_header4.setBackground(new java.awt.Color(5, 32, 56));
 
@@ -2582,6 +2604,7 @@ protected void tab_transaksi(){
         brands_b_tambah.setForeground(new java.awt.Color(231, 238, 126));
         brands_b_tambah.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8_add_24px.png"))); // NOI18N
         brands_b_tambah.setText("TAMBAH");
+        brands_b_tambah.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         brands_b_tambah.setIconTextGap(8);
         brands_b_tambah.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -2608,6 +2631,7 @@ protected void tab_transaksi(){
         brands_b_hapus.setForeground(new java.awt.Color(231, 238, 126));
         brands_b_hapus.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8_trash_can_24px.png"))); // NOI18N
         brands_b_hapus.setText("   HAPUS");
+        brands_b_hapus.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         brands_b_hapus.setIconTextGap(8);
         brands_b_hapus.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -2634,6 +2658,7 @@ protected void tab_transaksi(){
         brands_b_cari.setForeground(new java.awt.Color(231, 238, 126));
         brands_b_cari.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8_search_24px.png"))); // NOI18N
         brands_b_cari.setText("CARI/REFRESH");
+        brands_b_cari.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         brands_b_cari.setIconTextGap(8);
         brands_b_cari.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -2661,6 +2686,7 @@ protected void tab_transaksi(){
         brands_b_edit.setForeground(new java.awt.Color(231, 238, 126));
         brands_b_edit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8_edit_24px_1.png"))); // NOI18N
         brands_b_edit.setText("     EDIT");
+        brands_b_edit.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         brands_b_edit.setIconTextGap(8);
         brands_b_edit.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -2819,6 +2845,7 @@ protected void tab_transaksi(){
         user_b_tambah.setForeground(new java.awt.Color(231, 238, 126));
         user_b_tambah.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8_add_24px.png"))); // NOI18N
         user_b_tambah.setText("TAMBAH");
+        user_b_tambah.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         user_b_tambah.setIconTextGap(8);
         user_b_tambah.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -2845,6 +2872,7 @@ protected void tab_transaksi(){
         user_b_hapus.setForeground(new java.awt.Color(231, 238, 126));
         user_b_hapus.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8_trash_can_24px.png"))); // NOI18N
         user_b_hapus.setText("   HAPUS");
+        user_b_hapus.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         user_b_hapus.setIconTextGap(8);
         user_b_hapus.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -2871,6 +2899,7 @@ protected void tab_transaksi(){
         user_b_cari.setForeground(new java.awt.Color(231, 238, 126));
         user_b_cari.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8_search_24px.png"))); // NOI18N
         user_b_cari.setText("CARI/REFRESH");
+        user_b_cari.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         user_b_cari.setIconTextGap(8);
         user_b_cari.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -2898,6 +2927,7 @@ protected void tab_transaksi(){
         user_b_edit.setForeground(new java.awt.Color(231, 238, 126));
         user_b_edit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8_edit_24px_1.png"))); // NOI18N
         user_b_edit.setText("     EDIT");
+        user_b_edit.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         user_b_edit.setIconTextGap(8);
         user_b_edit.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -3056,6 +3086,7 @@ protected void tab_transaksi(){
         tipe_b_tambah.setForeground(new java.awt.Color(231, 238, 126));
         tipe_b_tambah.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8_add_24px.png"))); // NOI18N
         tipe_b_tambah.setText("TAMBAH");
+        tipe_b_tambah.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         tipe_b_tambah.setIconTextGap(8);
         tipe_b_tambah.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -3082,6 +3113,7 @@ protected void tab_transaksi(){
         tipe_b_hapus.setForeground(new java.awt.Color(231, 238, 126));
         tipe_b_hapus.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8_trash_can_24px.png"))); // NOI18N
         tipe_b_hapus.setText("   HAPUS");
+        tipe_b_hapus.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         tipe_b_hapus.setIconTextGap(8);
         tipe_b_hapus.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -3108,6 +3140,7 @@ protected void tab_transaksi(){
         tipe_b_cari.setForeground(new java.awt.Color(231, 238, 126));
         tipe_b_cari.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8_search_24px.png"))); // NOI18N
         tipe_b_cari.setText("CARI/REFRESH");
+        tipe_b_cari.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         tipe_b_cari.setIconTextGap(8);
         tipe_b_cari.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -3135,6 +3168,7 @@ protected void tab_transaksi(){
         tipe_b_edit.setForeground(new java.awt.Color(231, 238, 126));
         tipe_b_edit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8_edit_24px_1.png"))); // NOI18N
         tipe_b_edit.setText("     EDIT");
+        tipe_b_edit.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         tipe_b_edit.setIconTextGap(8);
         tipe_b_edit.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -3211,6 +3245,7 @@ protected void tab_transaksi(){
         p_utama.add(p_tipe, "p_tipe");
 
         p_transaksi.setBackground(new java.awt.Color(254, 255, 230));
+        p_transaksi.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         p_perusahaan_header7.setBackground(new java.awt.Color(5, 32, 56));
 
@@ -3293,6 +3328,7 @@ protected void tab_transaksi(){
         transaksi_b_tambah.setForeground(new java.awt.Color(231, 238, 126));
         transaksi_b_tambah.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8_add_24px.png"))); // NOI18N
         transaksi_b_tambah.setText("TAMBAH");
+        transaksi_b_tambah.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         transaksi_b_tambah.setIconTextGap(8);
         transaksi_b_tambah.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -3319,6 +3355,7 @@ protected void tab_transaksi(){
         transaksi_b_cari.setForeground(new java.awt.Color(231, 238, 126));
         transaksi_b_cari.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8_search_24px.png"))); // NOI18N
         transaksi_b_cari.setText("CARI/REFRESH");
+        transaksi_b_cari.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         transaksi_b_cari.setIconTextGap(8);
         transaksi_b_cari.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -3346,6 +3383,7 @@ protected void tab_transaksi(){
         transaksi_b_edit.setForeground(new java.awt.Color(231, 238, 126));
         transaksi_b_edit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8_edit_24px_1.png"))); // NOI18N
         transaksi_b_edit.setText("     EDIT");
+        transaksi_b_edit.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         transaksi_b_edit.setIconTextGap(8);
         transaksi_b_edit.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -3372,6 +3410,7 @@ protected void tab_transaksi(){
         transaksi_b_edit1.setForeground(new java.awt.Color(231, 238, 126));
         transaksi_b_edit1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8_Medical_History_24px.png"))); // NOI18N
         transaksi_b_edit1.setText(" HISTORY");
+        transaksi_b_edit1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         transaksi_b_edit1.setIconTextGap(8);
         transaksi_b_edit1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -3498,6 +3537,7 @@ protected void tab_transaksi(){
         tipe_b_cari2.setForeground(new java.awt.Color(231, 238, 126));
         tipe_b_cari2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8_search_24px.png"))); // NOI18N
         tipe_b_cari2.setText("C E T A K");
+        tipe_b_cari2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         tipe_b_cari2.setIconTextGap(8);
         tipe_b_cari2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -3533,6 +3573,7 @@ protected void tab_transaksi(){
         tipe_b_cari3.setForeground(new java.awt.Color(231, 238, 126));
         tipe_b_cari3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8_search_24px.png"))); // NOI18N
         tipe_b_cari3.setText("C E T A K");
+        tipe_b_cari3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         tipe_b_cari3.setIconTextGap(8);
         tipe_b_cari3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -3568,6 +3609,7 @@ protected void tab_transaksi(){
         tipe_b_cari5.setForeground(new java.awt.Color(231, 238, 126));
         tipe_b_cari5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8_search_24px.png"))); // NOI18N
         tipe_b_cari5.setText("C E T A K");
+        tipe_b_cari5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         tipe_b_cari5.setIconTextGap(8);
         tipe_b_cari5.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -3603,6 +3645,7 @@ protected void tab_transaksi(){
         tipe_b_cari6.setForeground(new java.awt.Color(231, 238, 126));
         tipe_b_cari6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8_search_24px.png"))); // NOI18N
         tipe_b_cari6.setText("C E T A K");
+        tipe_b_cari6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         tipe_b_cari6.setIconTextGap(8);
         tipe_b_cari6.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -3638,6 +3681,7 @@ protected void tab_transaksi(){
         tipe_b_cari7.setForeground(new java.awt.Color(231, 238, 126));
         tipe_b_cari7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8_search_24px.png"))); // NOI18N
         tipe_b_cari7.setText("C E T A K");
+        tipe_b_cari7.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         tipe_b_cari7.setIconTextGap(8);
         tipe_b_cari7.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -3673,6 +3717,7 @@ protected void tab_transaksi(){
         tipe_b_cari8.setForeground(new java.awt.Color(231, 238, 126));
         tipe_b_cari8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8_search_24px.png"))); // NOI18N
         tipe_b_cari8.setText("C E T A K");
+        tipe_b_cari8.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         tipe_b_cari8.setIconTextGap(8);
         tipe_b_cari8.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -3715,6 +3760,7 @@ protected void tab_transaksi(){
         tipe_b_cari4.setForeground(new java.awt.Color(231, 238, 126));
         tipe_b_cari4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8_search_24px.png"))); // NOI18N
         tipe_b_cari4.setText("C E T A K");
+        tipe_b_cari4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         tipe_b_cari4.setIconTextGap(8);
         tipe_b_cari4.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
