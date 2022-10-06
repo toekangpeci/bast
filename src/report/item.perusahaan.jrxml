@@ -86,7 +86,7 @@ where trans_barang.kode_perusahaan=$P{id_perusahaan};]]>
 		<band height="79" splitType="Stretch">
 			<image>
 				<reportElement uuid="f1ab8ae5-9164-43dc-87c0-97147c01962f" x="153" y="1" width="402" height="35"/>
-				<imageExpression><![CDATA["D:\\project\\BAST\\src\\img\\LOGO-PAKUAN-Tbk (1).jpg"]]></imageExpression>
+				<imageExpression><![CDATA["lib\\LOGO-PAKUAN-Tbk (1).jpg"]]></imageExpression>
 			</image>
 			<staticText>
 				<reportElement uuid="d00374e6-4c97-4eb7-9540-0df8da5f9224" x="81" y="36" width="375" height="33"/>

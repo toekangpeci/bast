@@ -107,7 +107,7 @@ Jl. Raya Muchtar RT 001, 002, 003, RW 001, 007, Kelurahan Sawangan, Kecamatan Sa
 			</staticText>
 			<image>
 				<reportElement uuid="f1ab8ae5-9164-43dc-87c0-97147c01962f" x="153" y="4" width="402" height="35"/>
-				<imageExpression><![CDATA["D:\\project\\BAST\\src\\img\\LOGO-PAKUAN-Tbk (1).jpg"]]></imageExpression>
+				<imageExpression><![CDATA["lib\\LOGO-PAKUAN-Tbk (1).jpg"]]></imageExpression>
 			</image>
 		</band>
 	</title>

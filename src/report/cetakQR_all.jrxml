@@ -127,7 +127,7 @@ FROM
 			</textField>
 			<image>
 				<reportElement uuid="c095ce2b-5371-47b7-bda7-ade23fbcb799" x="76" y="98" width="126" height="14"/>
-				<imageExpression><![CDATA["C:\\Users\\PAKUAN-IT\\Documents\\LOGO-PAKUAN-Tbk.jpg"]]></imageExpression>
+				<imageExpression><![CDATA["lib\\LOGO-PAKUAN-Tbk (1).jpg"]]></imageExpression>
 			</image>
 			<image>
 				<reportElement uuid="0687b422-e4c3-46df-810d-680a9fa5cb5c" x="305" y="5" width="117" height="107"/>

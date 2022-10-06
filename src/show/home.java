@@ -1245,7 +1245,7 @@ protected void tab_transaksi(){
         jLabel42.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel42.setForeground(new java.awt.Color(231, 238, 126));
         jLabel42.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8_edit_24px_1.png"))); // NOI18N
-        jLabel42.setText("C O M I N G   T O   Y O U   S O O N  .  .  .  .");
+        jLabel42.setText("   C O M I N G   T O   Y O U   S O O N  .  .  .  .");
         jLabel42.setIconTextGap(8);
 
         javax.swing.GroupLayout b_editLayout = new javax.swing.GroupLayout(b_edit);
